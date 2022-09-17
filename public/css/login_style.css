@@ -1,0 +1,312 @@
+/*=========google font==============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+/*=========common css start=========*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+/*===============common css end===============================*/
+
+/*===============login header section start===================*/
+
+#login {
+    background: #FFFDF9;
+    height: 70px;
+    padding: 13px 20px;
+    border-bottom: 1px solid var(--zds-colors-neutral-300,#e8e7e4);
+}
+.moni_login_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.moni_login_img {
+    width: 75px;
+}
+.moni_sign_up_link a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFDF9;
+    background: #03989E;
+    display: block;
+    padding: 11px 22px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.moni_sign_up_link a:hover {
+    box-shadow: 1px 2px 8px 0px gray;
+}
+/*===============login header section end======================*/
+
+/*===============login account section start===================*/
+
+#login_account {
+    background: #FFFDF9;
+}
+
+.moni_login_account_section_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 50px 60px;
+    gap: 25px;
+}
+.moni_login_account_left_content_section {
+    flex-basis: 50%;
+    max-width: 500px;
+}
+.moni_login_account_left_content_title {
+    color: #2D2E2E;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.moni_login_acccount_left_content_description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #403f3e;
+    margin-bottom: 15px;
+}
+.moni_login_account_left_content_btn a {
+    background: #3d4592;
+    font-size: 16px;
+    font-weight: 600;
+    height: 44px;
+    line-height: 25px;
+    color: #FFFDF9;
+    display: block;
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+.moni_login_account_left_content_btn a:hover {
+    background: #2C3266;
+}
+.moni_login_account_right_account_section{
+    flex-basis: 50%;
+}
+.moni_login_account_right_account_title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2D2E2E;
+    line-height: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+.moni_login_account_right_account_inner_section {
+    padding: 20px;
+    border: 1px solid #D2CEC6;
+    border-radius: 3px;
+    max-width: 430px;
+    margin: auto;
+}
+
+.google_btn .same_style{
+    position: relative;
+    width: 100%;
+    background: #4285f4;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 13px;
+    color: #FFFDF9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google_btn .same_style:hover{
+    background:#3B5999;
+}
+.facebook_btn .same_style{
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 13px;
+    color: #FFFDF9;
+    width: 100%;
+    background: #3B5999;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.linK {
+    display: block;
+}
+.facebook_btn .same_style:hover{
+    background: #3B5999;
+}
+.microsoft_btn .same_style{
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 13px;
+    color: #FFFDF9;
+    width: 100%;
+    background: #2d2e2e;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.microsoft_btn .same_style:hover{
+    background: #403F3E;
+}
+.icon_background {
+    position: absolute;
+    left: 17px;
+    top: 10px;
+}
+.icon_background i {
+    display: block;
+    background: #FFFDF9;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #3367D6;
+    font-size: 18px;
+}
+.same_style {
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 13px;
+    color: #FFFDF9;
+}
+
+.hr_section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.hr {
+    width: 45%;
+    height: 0;
+    border-top: 1px solid #fff;
+}
+
+.or {
+    padding: 0 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #757575;
+}
+
+.login_email input {
+    width: 100%;
+    border: 1px solid #95928e;
+    padding: 10px 15px;
+    font-size: 17px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.login_email {
+    margin-bottom: 25px;
+}
+.login_email label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #13151a;
+}
+.req {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #403f3e;
+}
+
+.login_countune_btn {
+    width: 388px;
+    margin: auto;
+    border: 1px solid #D9D3CC;
+    padding: 10px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #F7F5F2;
+    margin-bottom: 30px;
+}
+.login_countune_btn #loginbutton {
+    display: block;
+    text-align: center;
+    color: #B2A5A0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.signup {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #424242;
+    text-align: center;
+}
+
+.signup a {
+    text-decoration: underline;
+    color: #3d4592;
+}
+.signup a:hover {
+    color: #2c3266;
+}
+
+.login_countune_btn.tf44r{
+    background: #66fb66;
+}
+/*===============login account section end===================*/

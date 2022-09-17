@@ -1,0 +1,102 @@
+/*=================pricing plan section responsive start===============================*/
+
+@media (max-width:640px) {
+    #pricing_plan {
+        padding: 23px;
+    }
+    .moni_pricing_plan_title {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+    
+    .moni_pricing_plan_description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .moni_pricing_plan_inner_section {
+        flex-direction: column;
+    }
+}
+
+/*=======================pricing plan section responsive end===============================*/
+
+
+/*=================pricing plan card section responsive start===============================*/
+
+@media (max-width:1280px) {
+    .moni_pricing_plan_card_col {
+        flex-basis: 32% ;
+    }
+
+}
+
+@media (max-width:900px) {
+    .moni_pricing_plan_card_col {
+        flex-basis: 47%;
+    }
+    .moni_pricing_plan_card_row {
+        display: flex;
+        justify-content: space-between;
+        
+      }
+}
+@media (max-width:715px) {
+    .moni_pricing_plan_card_row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
+      }
+      .moni_features_plan_card_two {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+
+/*=================pricing plan card section responsive end===========================*/
+
+
+
+
+/*=====================footer section responsive start=================================*/
+
+
+
+@media (max-width:640px) {
+
+    .footer-copy-right-wrapper {
+        flex-direction: column;
+    }
+    
+    .footer-copy-right-img img {
+        margin-bottom: 40px;
+    }
+    
+    .footer-copy-right-link {
+        flex-direction: column;
+    }
+    
+    .copy-right {
+        margin-bottom: 15px;
+    }
+    .footer-link-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .footer-linkIcon-link-wrapper {
+        flex-direction: column;
+    }
+    .footer-link-wrapper {
+        justify-content: center;
+    }
+    .footer-link-wrapper li {
+        line-height: 35px;
+    }
+    
+}
+/*=========footer section responsive end===========*/

@@ -1,0 +1,115 @@
+
+/*=================unfixed header section responsive start===============================*/
+
+/*=================unfixed header section responsive end===============================*/
+
+@media(max-width:660px){
+
+    .moni_wrokflow_box_search_app_row {
+        flex-direction: column;
+    }
+    .moni_wrokflow_box_search_app_col {
+        margin-bottom: 15px;
+    }
+    .moni_nav_right_search_icon {
+        margin-right: 0;
+    }
+}
+
+@media (max-width:620px) {
+    .moni_search_box input {
+        width: 370px;
+    }
+}
+@media (max-width:620px) {
+    .moni_search_box input {
+        width: 260px;
+    }
+}
+@media (max-width:500px) {
+
+    .moni_search_box input {
+        width: 210px;
+    }
+}
+@media (max-width:400px) {
+
+    .moni_search_box input {
+        width: 180px;
+    }
+    .moni_search_box {
+        margin-right: 0px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .moni_rh_567_dropdown_details.mySelfTrigger {
+        width: 98% !important;
+        margin: auto;
+    }
+    .moni_rh_567_dropdown_summary_apps_icon_tag_content_svg_icon_tag {
+        font-size: 14px;
+        margin-left: 0px;
+        margin-bottom: -4px;
+    }
+    .moni_rh_567_dropdown_summary_apps_icon_tag_content_svg_icon_tag_title h2 {
+        font-size: 16px;
+    }
+    .AppTriggerDescription {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    .moni_rh_567_img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .AppTriggerLogo {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .moni_rh_567_dropdown_summary {
+        padding: 0px 10px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+
+    .moni_rh_567_dropdown_wrapper {
+        width: 95%;
+    }
+
+    .moni_rh_567_dropdown_summary_apps_icon_tag_content_svg_icon_tag {
+        font-size: 12px;
+    }
+
+    .moni_rh_567_dropdown_summary_apps_icon_tag_content_svg_icon_tag_title h2 {
+        font-size: 14px;
+        margin-bottom: -5px;
+    }
+    .AppTriggerDescription {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .AppTriggerLogo {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .moni_rh_567_img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+}
+
+
+
+

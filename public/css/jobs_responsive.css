@@ -1,0 +1,178 @@
+/*=============== time save hero section responsive start==================*/
+
+@media (max-width:1024px) {
+    
+.moni_time_save_hero_title {
+    font-size: 48px;
+    line-height: 55px;
+  }
+  
+.svg {
+    top: 35px;
+    right: 168px;
+    width: 53px;
+  }
+  .moni_time_save_hero_descrption {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width:660px) {
+    .moni_time_save_hero_title {
+        font-size: 32px;
+        line-height: 35px;
+      }
+    
+.moni_time_save_hero_descrption {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 380px;
+    margin: auto;
+  }
+  .svg {
+    visibility: hidden;
+  }
+}
+
+/*=============== time save hero section responsive end==============*/
+
+/*===============user card section responsive start==================*/
+
+@media (max-width:1024px) {
+    .moni_user_card_col {
+        flex-basis: 48%;
+      }
+    }
+@media (max-width:660px) {
+    .moni_user_card_col {
+        flex-basis: 100%;
+      }
+}
+/*===============user card section responsive end==================*/
+
+
+
+/*===============user case card section responsive end==================*/
+
+@media (max-width:1024px) {
+    .moni_user_case_card_col.hidden {
+        display: none;
+      }
+      .moni_user_case_card_row {
+        justify-content: space-around;
+      }
+}
+@media (max-width:660px) {
+    .moni_user_case_card_row {
+        flex-direction: column;
+    }
+    h2.moni_user_case_card_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .moni_user_case_card_btn a {
+        max-width: 370px;
+        margin: auto;
+    }
+    
+    .moni_user_case_card_btn a {
+        width: 370px;
+        margin: auto;
+    }
+}
+
+/*==========user case card section responsive end==================*/
+
+/*===============sign up section responsive start==================*/
+
+@media (max-width:660px) {
+    h2.moni_sign_up_heading {
+        font-size: 32px;
+        line-height: 35px;
+    }
+    
+    p.moni_sign_up_para {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:660px) {
+    
+.moni_signup_wrapper {
+    flex-direction: column;
+  }
+
+  .moni_sign_up_content_title {
+    text-align: center;
+  }
+  .moni_sign_up_account_wrapper {
+    max-width: 100%;
+  }
+  .moni_sign_up_account {
+    width: 100%;
+  }
+  .moni_sign_up_link {
+    text-align: center;
+  }
+  
+.moni_same_btn a {
+    font-size: 16px;
+  }
+  
+.moni_first_last_name {
+    flex-direction: column;
+  }
+  .moni_first_name {
+    width: 100%;
+  }
+  .moni_last_name {
+    width: 100%;
+  }
+  #sign_up_account {
+    background: #FFFDF9;
+    padding: 30px 20px;
+  }
+}
+
+/*===============sign up section responsive end==================*/
+
+/*==============footer section responsive start==================*/
+
+@media (max-width:640px) {
+
+  .footer-copy-right-wrapper {
+      flex-direction: column;
+  }
+  
+  .footer-copy-right-img img {
+      margin-bottom: 40px;
+  }
+  
+  .footer-copy-right-link {
+      flex-direction: column;
+  }
+  
+  .copy-right {
+      margin-bottom: 15px;
+  }
+  .footer-link-wrapper {
+      flex-direction: column;
+  }
+}
+
+@media (max-width:1024px) {
+
+  .footer-linkIcon-link-wrapper {
+      flex-direction: column;
+  }
+  .footer-link-wrapper {
+      justify-content: center;
+  }
+  .footer-link-wrapper li {
+      line-height: 35px;
+  }
+  
+}
+
+/*=========footer section responsive end===========*/

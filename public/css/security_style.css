@@ -1,0 +1,259 @@
+/*=========google font==============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+/*=========common css start=========*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+/*=======================common css end================================*/
+
+
+/* ==================Security and Compliance section start =============*/
+
+#security_compliance {
+    padding: 50px 20px;
+    background: #FFFDF9;
+}
+.moni_security_compliance_title {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 75px;
+    color: #31201F;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0px 70px 0px;
+}
+.moni_security_compliance_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.moni_security_compliance_left_content {
+    max-width: 500px;
+}
+.moni_security_compliance_right_img {
+    max-width: 500px;
+}
+.moni_security_compliance_right_img img {
+    width: 100%;
+}
+.moni_content_title {
+    max-width: 470px;
+    font-size: 40px;
+    line-height: 45px;
+    color: #402E2E;
+    margin-bottom: 20px;
+}
+.moni_content_small_title {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2d2e2e;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.moni_content_description{
+    max-width: 470px;
+}
+.text1 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2d2e2e;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.text2 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2d2e2e;
+    font-weight: 400;
+}
+.same_style {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-decoration: underline;
+    color: #3d4592;
+}
+
+
+
+/* ==================Security and Compliance section end =============*/
+
+
+/* ==================best security section start =============*/
+
+
+#best_security {
+    background: #FFFDF9;
+    padding: 50px 20px;
+}
+.moni_best_security_title {
+    width: 100%;
+    text-align: center;
+}
+.title {
+    font-size: 40px;
+    line-height: 45px;
+    color: #2d2e2e;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.description {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2d2e2e;
+    font-weight: 400;
+}
+.best_security_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    gap: 30px;
+}
+.best_security_left_account {
+    max-width: 500px;
+}
+.best_security_right_img {
+    max-width: 500px;
+}
+.best_security_right_img img {
+    width: 100%;
+    border-radius: 5px;
+}
+.best_security_left_account{
+    text-align: left;
+}
+.account_title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2d2e2e;
+    margin-bottom: 20px;
+    line-height: 45px;
+}
+.account_bold_text strong {
+    font-size: 18px;
+    color: #2d2e2e;
+    line-height: 25px;
+    margin-bottom: 10px;
+    display: block;
+}
+.acccount_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2d2e2e;
+    line-height: 25px;
+    padding: 0 30px 0 0px;
+    margin-bottom: 10px;
+}
+.order_1{
+    order: 1;
+}
+.order_2{
+    order: 2;
+}
+
+
+/* ==============================best security section end===============*/
+
+
+/* ===============Vulnerability management section start =================*/
+
+
+
+#Vulnerability_management {
+    padding: 70px 30px;
+    background: #FFFDF9;
+}
+.vulnerability_management_title {
+    font-size: 40px;
+    color: #424242;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.vulnerability_management_title {
+    font-size: 40px;
+    color: #424242;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.moni_management_title {
+    font-size: 22px;
+    color: #2d2e2e;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.moni_vulnerability_management_wrapper {
+    display: flex;
+    gap: 30px;
+}
+.moni_vulnerability_management_content_left {
+    flex-basis: 50%;
+}
+.moni_vulnerability_management_content_right {
+    flex-basis: 50%;
+}
+.moni_vulnerability_managennt_content_left_up {
+    margin-bottom: 60px;
+}
+.moni_management_decription {
+    font-size: 18px;
+    color: #2d2e2e;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+/* ===============Vulnerability management section end =================*/

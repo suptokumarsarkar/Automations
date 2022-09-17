@@ -1,0 +1,331 @@
+/* =================featured article section responsive start =================*/
+
+
+@media (max-width:640px) {
+
+    h1.moni_featured_article_left_content_heading {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+      p.moni_featured_article_left_content_description {
+        font-size: 16px;
+      }
+    }
+
+@media (max-width:1024px) {
+
+.moni_featured_article_row {
+    flex-direction: column;
+  }
+  .moni_featured_aticle_col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .change_order_2 {
+    order: 2;
+  }
+  .change_order_1 {
+    order: 1;
+  }
+
+}
+
+
+
+
+/* =================featured article section responsive end =================*/
+
+/* =================featured outer section responsive start =================*/
+
+
+
+@media (max-width:1024px) {
+
+    div.moni_featured_outer_col {
+        flex-basis: 50%;
+      }
+      div.moni_featured_outer_col_wrapper {
+        width: 60%;
+        margin: auto;
+      }
+}
+@media (max-width:640px) {
+    div.moni_featured_outer_col {
+        flex-basis: 100%;
+      }
+      div.moni_featured_outer_col_wrapper {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+.same_style {
+    border-bottom: 1px solid aliceblue;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .moni_featured_outer_col_wrapper a p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* =================featured outer section responsive end =================*/
+
+
+/* ==========================subcribe_responsive_start==================== */
+
+
+@media (max-width:640px) {
+
+    .moni_subcribe_title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .form {
+      flex-direction: column;
+    }
+    .moni_subcribe_email input {
+      margin-bottom: 15px;
+    }
+    section#subscribe {
+        background: #FFF3E6;
+        padding: 30px 0 30px 0;
+
+    }
+    h2.moni_subcrcibe_title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        text-align: center;
+        color: #2d2e2e;
+        margin-bottom: 15px;
+      }
+
+      h2.moni_subcrcibe_title.title {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+
+
+/* ==================subcribe_section_responsive_end======================= */
+
+/* ==================blog_card_section_responsive_start==================== */
+
+
+@media (max-width:1024px) {
+div.moni_coustomer_stories_card_col {
+  flex-basis: 48%;
+}
+}
+@media (max-width:700px) {
+div.moni_coustomer_stories_card_col {
+  flex-basis: 100%;
+}
+
+div.backgound_img.moni_coustomer_stories_card_col {
+background-image: none;
+padding: 50px 0;
+}
+
+p.moni_type_of_description {
+  min-height: 0px;
+}
+
+div.moni_col_inner {
+margin-top: 0px;
+}
+div.backgound_img.moni_coustomer_stories_card_col{
+min-height: 0px;
+}
+h2.moni_coustomer_stories_inner_card_title {
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+}
+}
+
+
+/* =====================blog_card_section_responsive_end================== */
+
+/* =====================blog work section responsive start ================*/
+
+
+    @media (max-width:1024px) {
+      h3.moni_blog_work_img_wrapper_title {
+        color: #2d2e2e;
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 600;
+        width: 50%;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+      }
+      div.moni_blog_work_img_wrapper {
+        position: relative;
+        max-width: 265px;
+        height: 137px;
+        background: var(--zds-colors-neutral-100,#fffdf9);
+        border: 1px solid var(--zds-colors-neutral-400,#d7d5d2);
+        border-radius: 3px;
+        box-shadow: 0px 20px 30px rgb(0 0 0 / 10%);
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      div.moni_blog_work_img_wrapper .img_1 {
+        height: 110px;
+      }
+      div.moni_blog_work_img_wrapper .img_2 {
+        height: 135px;
+      }
+      div.moni_blog_work_img_wrapper .img_3 {
+        height: 112px;
+        bottom: 15px;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+      }
+      h3.moni_blog_work_img_wrapper_title {
+        color: #2d2e2e;
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 600;
+        width: 63%;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+      }
+    }
+    @media (max-width:700px) {
+      div.moni_blog_work_row {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    div.moni_blog_work_col {
+        width: 100%;
+    }
+
+    h2.moni_blog_work_title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    }
+
+
+/* =====================blog work section responsive end ================*/
+
+/* ============LightNit recommends section responsive start================*/
+
+ @media (max-width:900px) {
+  div.moni_recommend_col {
+    width: 50%;
+    flex-basis: 48%;
+}
+}
+
+@media (max-width:640px) {
+  div.moni_recommend_col {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+div.moni_recommend_col_wrapper {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+div.moni_recommend_col_text {
+  max-width: 100%;
+}
+}
+
+
+/* ==============LightNit recommends section responsive end===============*/
+
+
+/* =====================signup_section_responsive_end================== */
+
+
+@media (max-width:768px) {
+
+
+  .coustomer_stories_signup {
+    background: #FFF3E6;
+    padding:50px 20px;
+  }
+
+  .moni_coustomer_stories_signup_row {
+    flex-direction: column;
+    text-align: center;
+}
+
+.moni_coustomer_stories_signup_right_col_img img {
+    display: none;
+}
+
+.moni_signup_link-wrapper {
+    flex-direction: column;
+}
+
+h2.moni_coustomer_stories_signup_left_title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.signup {
+    margin-bottom: 20px;
+}
+}
+
+/* ===========signup_section_responsive_end============= */
+
+
+/*============footer section responsive start============*/
+
+
+
+@media (max-width:640px) {
+
+  .footer-copy-right-wrapper {
+      flex-direction: column;
+  }
+
+  .footer-copy-right-img img {
+      margin-bottom: 40px;
+  }
+
+  .footer-copy-right-link {
+      flex-direction: column;
+  }
+
+  .copy-right {
+      margin-bottom: 15px;
+  }
+  .footer-link-wrapper {
+      flex-direction: column;
+  }
+}
+
+@media (max-width:1024px) {
+
+  .footer-linkIcon-link-wrapper {
+      flex-direction: column;
+  }
+  .footer-link-wrapper {
+      justify-content: center;
+  }
+  .footer-link-wrapper li {
+      line-height: 35px;
+  }
+
+}
+/*=========footer section responsive end===========*/

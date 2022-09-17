@@ -1,0 +1,237 @@
+
+/*=================hero explore home section responsive start============*/
+
+@media (max-width:1024px) {
+    .moni_hero_explore_home_col_wrapper_heading {
+        font-size: 40px;
+        line-height: 45px;
+        max-width: 700;
+        font-weight: 600;
+      }
+}
+@media (max-width:660px) {
+  .moni_hero_explore_home_link_list_items_links {
+    background: #2d2e2e;
+    color: #fffdf9;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    padding: 0px 15px;
+    border-radius: 30px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 135px;
+  }
+}
+
+/*================hero explore home section responsive end===============*/
+
+/*=====================apps logo section responsive start================*/
+
+@media (max-width:768px) {
+  
+.moni_apps_logo_col {
+  flex-direction: column;
+}
+.moni_apps_logo_col_inner_logo_wrapper {
+  margin-bottom: 25px;
+  width: 100%;
+}
+.moni_apps_logo_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moni_apps_logo_col_inner_logo_wrapper:last-child {
+  margin-bottom: 0;
+}
+}
+
+/*=====================apps logo section responsive end================*/
+
+/*===========saving time today section responsive start================*/
+
+  @media (max-width:1024px) {
+    
+.moni_saving_time_today_col.display_none_1 {
+  display: none;
+}
+
+.moni_saving_time_today_col {
+  flex-basis: 48.5%;
+}
+ }
+ @media (max-width:660px) {
+  .moni_saving_time_today_col {
+    margin-bottom: 25px;
+  }
+  .moni_saving_time_today_row {
+    flex-direction: column;
+  }
+  
+.moni_heading {
+  font-size: 24px;
+  line-height: 32px;
+}
+ }
+
+/*===========saving time today section responsive end==============*/
+
+/*========time saving slider section responsive start==============*/
+
+@media (max-width:660px) {
+
+  .moni_time_saving_slider_heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .moni_time_saving_slider_des {
+    font-size: 16px;
+    line-height: 20px;
+  }
+} 
+
+/*===========time saving slider section responsive end===============*/
+
+/*============find apps section responsive start=====================*/
+
+  @media (max-width:660px) {
+  
+.moni_search_box_row {
+  flex-direction: column;
+  }
+.moni_search_col {
+  flex-basis: 100%;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.moni_search_plagin_col {
+  width: 100%;
+}
+.moni_apps_row{
+  justify-content: center;
+  gap:0 50px;
+}
+
+}  
+
+/*=================find apps section responsive end===============================*/
+
+/*=================selected apps section responsive start========================*/
+
+@media (max-width:1024px) {
+  .moni_seclected_apps_col {
+    flex-basis: 48%;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width:768px) {
+  .moni_seclected_apps_col {
+    flex-basis: 100%;
+    margin-bottom: 25px;
+  }
+  .moni_seclected_apps_unner_btn_wrapper a {
+    width: 100%;
+  }
+}
+
+/*=================selected apps section responsive end============*/
+
+/*===============sign up section responsive start==================*/
+
+@media (max-width:660px) {
+  h2.moni_sign_up_heading {
+      font-size: 32px;
+      line-height: 35px;
+  }
+  
+  p.moni_sign_up_para {
+      font-size: 16px;
+  }
+}
+
+@media (max-width:660px) {
+  
+.moni_signup_wrapper {
+  flex-direction: column;
+}
+
+.moni_sign_up_content_title {
+  text-align: center;
+}
+.moni_sign_up_account_wrapper {
+  max-width: 100%;
+}
+.moni_sign_up_account {
+  width: 100%;
+}
+.moni_sign_up_link {
+  text-align: center;
+}
+
+.moni_same_btn a {
+  font-size: 16px;
+}
+
+.moni_first_last_name {
+  flex-direction: column;
+}
+.moni_first_name {
+  width: 100%;
+}
+.moni_last_name {
+  width: 100%;
+}
+#sign_up_account {
+  background: #FFFDF9;
+  padding: 30px 20px;
+}
+}
+
+/*===============sign up section responsive end==================*/
+
+/*==============footer section responsive start==================*/
+
+@media (max-width:640px) {
+
+  .footer-copy-right-wrapper {
+      flex-direction: column;
+  }
+  
+  .footer-copy-right-img img {
+      margin-bottom: 40px;
+  }
+  
+  .footer-copy-right-link {
+      flex-direction: column;
+  }
+  
+  .copy-right {
+      margin-bottom: 15px;
+  }
+  .footer-link-wrapper {
+      flex-direction: column;
+  }
+}
+
+@media (max-width:1024px) {
+
+  .footer-linkIcon-link-wrapper {
+      flex-direction: column;
+  }
+  .footer-link-wrapper {
+      justify-content: center;
+  }
+  .footer-link-wrapper li {
+      line-height: 35px;
+  }
+  
+}
+
+/*=========footer section responsive end===========*/
+
+
+

@@ -1,0 +1,158 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "LanguageName"
+msgid "Localized language name"
+msgstr "English"
+
+msgctxt "Addons::name::wk_ebay_connector"
+msgid "Ebay Connector"
+msgstr "Ebay Connector"
+
+msgctxt "Languages::wk_ebay_connector"
+msgid "Ebay Connector"
+msgstr "Ebay Connector"
+
+msgctxt "Languages::ebay_connector"
+msgid "Application Name"
+msgstr "Application Name"
+
+msgctxt "Languages::wk_webkul_user_guide_content"
+msgid "Congratulation!! <b>\"[addon_name]\"</b> Add-on is succesfully installed. <ul class='inline social-share'><li><a href='[support_link]' target='_blank' class='uibutton large confirm'>Support Link</a></li><li><a href='[user_guide]' class='uibutton large confirm' target='_blank'>User Guide</a></li></ul>"
+msgstr "Congratulation!! <b>\"[addon_name]\"</b> Add-on is succesfully installed. <ul class='inline social-share'><li><a href='[support_link]' target='_blank' class='uibutton large confirm'>Support Link</a></li><li><a href='[user_guide]' class='uibutton large confirm' target='_blank'>User Guide</a></li></ul>"
+
+msgctxt "Addons::description::wk_ebay_connector"
+msgid "Allows user to manage Ebay products and orders from Cs-Cart store"
+msgstr "Allows user to manage Ebay products and orders from Cs-Cart store"
+
+msgctxt "Languages::manage_ebay_accounts"
+msgid "Manage Accounts"
+msgstr "Manage Accounts"
+
+msgctxt "Languages::add_ebay_merchant"
+msgid "Add Merchant Account"
+msgstr "Add Merchant Account"
+
+msgctxt "Languages::ebay_shop_details"
+msgid "Shop Info"
+msgstr "Shop Info"
+
+msgctxt "Languages::wk_ebay.ebay_dev_id"
+msgid "Ebay DevID"
+msgstr "Ebay DevID"
+
+msgctxt "Languages::wk_ebay.app_id"
+msgid "Ebay AppID"
+msgstr "Ebay AppID"
+
+msgctxt "Languages::wk_ebay.cert_id"
+msgid "Ebay CertID"
+msgstr "Ebay CertID"
+
+msgctxt "Languages::wk_ebay.oauth_tokens"
+msgid "Ebay User Token"
+msgstr "Ebay User Token"
+
+msgctxt "Languages::wk_ebay.shop_name"
+msgid "Ebay Shop Name"
+msgstr "Ebay Shop Name"
+
+msgctxt "Languages::wk_ebay.mode"
+msgid "Mode"
+msgstr "Mode"
+
+msgctxt "Languages::ebay_authenticate"
+msgid "Authenticate"
+msgstr "Authenticate"
+
+msgctxt "Languages::wk_ebay.oauth_token"
+msgid "Oauth Token"
+msgstr "Oauth Token"
+
+msgctxt "Languages::order_settings"
+msgid "Order Settings"
+msgstr "Order Settings"
+
+msgctxt "Languages::product_settings"
+msgid "Product Settings"
+msgstr "Product Settings"
+
+msgctxt "Languages::ebay_webhook_settings"
+msgid "Webhook Settings"
+msgstr "Webhook Settings"
+
+msgctxt "Languages::shop_name"
+msgid "Shope Name"
+msgstr "Shope Name"
+
+msgctxt "Languages::edit_ebay_merchant"
+msgid "Edit Ebay Merchant"
+msgstr "Edit Ebay Merchant"
+
+msgctxt "Languages::please_enter_valid_credentials"
+msgid "Please Enter Valid Credentials"
+msgstr "Please Enter Valid Credentials"
+
+msgctxt "Languages::account_already_exist_for_vendor"
+msgid "Account Already Exists For Vendor"
+msgstr "Account Already Exists For Vendor"
+
+msgctxt "Languages::sandbox"
+msgid "Sandbox"
+msgstr "Sandbox"
+
+msgctxt "Languages::production"
+msgid "Production"
+msgstr "Production"
+
+msgctxt "Languages::ebay_auth"
+msgid "eBay auth"
+msgstr "eBay auth"
+
+msgctxt "Languages::manage_ebay_products"
+msgid "Manage Ebay Products"
+msgstr "Manage Ebay Products"
+
+msgctxt "Languages::import_ebay_orders"
+msgid "Import Ebay Orders"
+msgstr "Import Ebay Orders"
+
+msgctxt "Languages::listing_id"
+msgid "Ebay Product ID"
+msgstr "Ebay Product ID"
+
+msgctxt "Languages::import_product"
+msgid "Import Products"
+msgstr "Import Products"
+
+msgctxt "Languages::import_products_from_ebay"
+msgid "Import Products from Ebay"
+msgstr "Import Products from Ebay"
+
+msgctxt "Languages::manage_ebay_orders"
+msgid "Manage Ebay Orders"
+msgstr "Manage Ebay Orders"
+
+msgctxt "Languages::sync_products"
+msgid "Sync Products"
+msgstr "Sync Products"
+
+msgctxt "Languages::list_of_ebay_orders"
+msgid "Select And Import Orders"
+msgstr "Select And Import Orders"
+
+msgctxt "Languages::e_orders"
+msgid "Ebay Orders"
+msgstr "Ebay Orders"
+
+msgctxt "Languages::ebay_order_id"
+msgid "Ebay Order ID"
+msgstr "Ebay Order ID"
+
+msgctxt "Languages::ebay_order_total"
+msgid "Ebay Order Total"
+msgstr "Ebay Order Total"
+

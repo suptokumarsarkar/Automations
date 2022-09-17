@@ -1,0 +1,134 @@
+/* ==================Security and Compliance section responsive start =============*/
+
+
+@media (max-width:1024px) {
+.moni_security_compliance_title {
+    font-size: 55px;
+    line-height: 60px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.moni_content_title {
+    font-size: 32px;
+    line-height: 35px;
+}
+.moni_security_compliance_wrapper {
+    flex-direction: column;
+}
+
+.moni_security_compliance_left_content {
+    max-width: 100%;
+    order: 2;
+}
+.moni_content_title {
+    max-width: 100%;
+}
+
+.moni_content_description {
+    max-width: 100%;
+}
+.moni_security_compliance_right_img {
+    max-width: 100%;
+    order: 1;
+    margin-bottom: 30px;
+}
+.moni_security_compliance_title {
+    padding: 0px 0px 50px 0px;
+}
+}
+
+
+
+@media (max-width:640px) {
+    .moni_security_compliance_title {
+        font-size: 40px;
+        line-height: 45px;
+        max-width: 300px;
+    }
+    .moni_content_title {
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .moni_security_compliance_title {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+
+/* ==================Security and Compliance section responsive end =============*/
+
+
+/* =============------=====best security section responsive start =====---========*/
+
+
+
+@media (max-width:640px) {
+    h2.account_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+
+@media (max-width:768px) {
+    p.description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .best_security_wrapper {
+        margin-top: 40px;
+        gap: 0px;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .best_security_wrapper {
+        flex-direction: column;
+    }
+    .best_security_left_account {
+        max-width: 100%;
+    }
+    .best_security_right_img {
+        max-width: 100%;
+    }
+    .best_security_right_img {
+        order: 1;
+    }
+    .best_security_left_account {
+        order: 2;
+    }
+    p.acccount_text {
+        padding: 0 0px 0 0px;
+    }
+    .best_security_left_account {
+        margin-top: 25px;
+    }
+    
+}
+
+
+/* ==============================best security section responsive end  =============*/
+
+
+/* ===============Vulnerability management section responsive start =================*/
+
+
+@media (max-width:768px) {
+    .moni_vulnerability_management_wrapper {
+        flex-direction: column;
+    }
+    p.moni_management_decription {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    h2.vulnerability_management_title {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/* ===============Vulnerability management section responsive end =================*/

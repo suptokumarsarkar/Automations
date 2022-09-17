@@ -1,0 +1,232 @@
+/* ==============form section responsive start =============*/
+
+@media (max-width:1060px) {
+    .moni_name_input_wrapper {
+        flex-direction: column;
+    }
+
+    .first_name {
+        width: 100%;
+    }
+
+    .last_name {
+        width: 100%;
+    }
+
+    input.input {
+        width: 100%;
+    }
+
+    .moni_email_company_wrapper {
+        flex-direction: column;
+    }
+
+    .email {
+        width: 100%;
+    }
+
+    .company_name {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .moni_form_section_wrapper {
+        flex-direction: column;
+    }
+
+    h2.moni_for_section_left_text_content_title {
+        text-align: center;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    p.moni_form_section_hero_text {
+        text-align: center;
+    }
+    .moni_form_section_left_text_content {
+        margin-bottom: 20px;
+      }
+      p.moni_expect_text {
+        text-align: center;
+    }
+
+}
+
+/* =================form section responsive end ===================*/
+
+/* ========LightNit teams and companies responsive start ============*/
+
+@media (max-width:768px) {
+    h2#moni_teams_companies_title {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .moni_LightNit_teams_wrapper {
+        flex-direction: column;
+    }
+
+    .moni_LightNit_teams_content {width: 100%;margin-bottom: 20px;}
+
+    .moni_LightNit_companies_content {
+        width: 100%;
+    }
+}
+
+/* ==========LightNit teams and companies responsive end ========*/
+
+/* =================builder block responsive start ============*/
+
+@media (max-width:900px) {
+    .moni_builder_block_img_row {
+        flex-basis: 19%;
+    }
+}
+
+@media (max-width:768px) {
+    .moni_builder_block_row {
+        flex-direction: column;
+    }
+
+    .moni_builder_block_img_col {
+        margin: auto;
+        text-align: center;
+    }
+    .block_img {
+        margin: auto;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .moni_builder_block_img_col {
+        margin: auto;
+    }
+}
+
+/* =================builder block responsive end ============*/
+
+/* ==========hero features section responsive start =========*/
+
+@media (max-width:768px) {
+
+    #hero_features {
+        padding: 20px 20px;
+        background: #FFFDF9;
+      }
+.moni_hero_title {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+  }
+
+  .moni_card_text p {
+    font-size: 16px;
+  }
+
+.moni_hero_features_card_col_title {
+    font-size: 16px;
+  }
+  .moni_hero_features_card_col_title {
+    margin-bottom: 60px;
+}
+}
+
+@media (max-width:1230px) {
+
+.moni_hero_features_card_row {
+    flex-direction: column;
+  }
+  .moni_hero_features_card_col {
+    max-width: 100%;
+  }
+}
+
+/* =================hero features section responsive end ============*/
+
+/* =================testimonial section responsive start ============*/
+
+@media (max-width:768px) {
+
+.moni_testimonial_description p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .moni_testimonial_text .name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .moni_testimonial_text .manager {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+.moni_testimonial_wrapper {
+    padding: 39px 19px;
+    margin: 0px auto;
+    text-align: center;
+    max-width: 500px;
+  }
+}
+
+/* =================testimonial section responsive end ============*/
+
+
+/* ============business level section responsive start ============*/
+
+@media (max-width:768px) {
+
+.moni_bussiness_level_col {
+    max-width: 100%;
+  }
+  .moni_bussiness_Request_demo_btn a{
+      width: 100%;
+  }
+  h2.moni_bussiness_level_title {
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFDF9;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+}
+
+/* =================business level section responsive end ============*/
+
+/*===============footer section responsive start======================*/
+
+@media (max-width:640px) {
+
+    .footer-copy-right-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-copy-right-img img {
+        margin-bottom: 40px;
+    }
+
+    .footer-copy-right-link {
+        flex-direction: column;
+    }
+
+    .copy-right {
+        margin-bottom: 15px;
+    }
+    .footer-link-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .footer-linkIcon-link-wrapper {
+        flex-direction: column;
+    }
+    .footer-link-wrapper {
+        justify-content: center;
+    }
+    .footer-link-wrapper li {
+        line-height: 35px;
+    }
+
+}
+/*=========footer section responsive end===========*/

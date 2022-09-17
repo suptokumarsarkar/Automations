@@ -1,0 +1,251 @@
+/*=========google font==============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+/*=========common css start=========*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+/*===============common css end===================*/
+
+
+
+/*=========free sign up section start=============*/
+
+#free-sign-up-section {
+    background: #03989E;
+    padding: 120px 30px;
+}
+
+.free-sign-up-section-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.free-sign-up-content {
+    margin-right: 60px;
+}
+
+.free-sign-up-content .content {
+    font-size: 48px;
+    color: #FFF3E6;
+    font-weight: 600;
+}
+
+.free.sign-up-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.free.sign-up-btn a {
+    background: #ffe7d1;
+    display: inline-block;
+    padding: 20px 0px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    height: 70px;
+    width: 288px;
+    text-align: center;
+    color: #2d2e2e;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.free.sign-up-btn a:hover{
+    background: #FFFDF9;
+}
+span.arrow-icon i {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #2d2e2e;
+}
+
+/*=========free sign up section end================*/
+
+
+
+/*=========footer section start====================*/
+
+footer#footer {
+    padding: 40px 20px;
+    background: #e3e3e3;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+}
+.footer-icon h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #403f3e;
+}
+.footer-icon-link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.icon {
+    display: flex;
+    align-items: center;
+}
+
+ul.icon li {
+    padding: 0px 10px;
+}
+
+ul.icon li a i{
+    background: #a8a5a0;
+    color: #fffdf9;
+    display: inline-block;
+    padding: 7px 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+ul.icon li a .fb:hover{
+    background: #3B5998;
+}
+.in:hover{
+    background: #0976B4;
+}
+.wifi:hover{
+    background: #FF4F00;
+}
+.twitter:hover{
+    background: #00ACED;
+}
+.youtube:hover{
+    background: #E52D27;
+}
+
+ul.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+ul.footer-link li {
+    padding: 0px 10px;
+}
+
+ul.footer-link li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #403f3e;
+    cursor: pointer;
+    line-height: 35px;
+    transition: 0.2s;
+}
+
+ul.footer-link li:last-child {
+    padding: 0px;
+}
+
+
+.footer-copy-right-section {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-copy-right-icon img {
+    width: 100%;
+}
+
+.footer-copy-right-link {
+    display: flex;
+    align-items: center;
+}
+
+/* .footer-copy-right-icon {
+    width: 75px;
+    height: 35px;
+} */
+
+ul.footer-copy-right-link-list {
+    display: flex;
+    align-items: center;
+}
+
+ul.footer-copy-right-link-list li {
+    padding: 0px 10px;
+}
+
+ul.footer-copy-right-link-list li a {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 700;
+    color: #403f3e;
+    transition: 0.2s;
+}
+
+.footer-copy-right-link p {
+    margin-right: 13px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #403f3e;
+}
+li.line {
+    border-left: 1px solid #d7d5d2;
+    border-right: 1px solid #d7d5d2;
+}
+
+ul.footer-link li a:hover {
+    color: #436DB8;
+}
+
+ul.footer-copy-right-link-list li a:hover {
+    color: #436DB8;
+}
+
+/*=========footer section end====================*/

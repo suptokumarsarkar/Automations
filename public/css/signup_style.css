@@ -1,0 +1,344 @@
+/*=========google font==============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+/*=========common css start=========*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+/*=================common css end===============================*/
+
+
+/*===============sign up header section start===================*/
+
+#sign_up {
+    background: #FFFDF9;
+    height: 70px;
+    padding: 13px 20px;
+    border-bottom: 1px solid var(--zds-colors-neutral-300,#e8e7e4);
+}
+.moni_sign_up_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.moni_sign_up_img {
+    width: 75px;
+}
+.moni_log_in_link a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d2e2e;
+    transition: 0.3s;
+}
+.moni_log_in_link a:hover {
+    color: #3d4592;
+}
+/*==================sign up header section end======================*/
+
+/*===============sign up account section start======================*/
+
+#sign_up_account {
+    background: #FFFDF9;
+    padding: 30px 0px;
+}
+.moni_signup_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.moni_sign_up_content {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+h2.moni_sign_up_content_title {
+    color: #2d2e2e;
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+li.moni_up_content_list_items {
+    display: flex;
+    align-items: center;
+
+}
+
+li.moni_up_content_list_items i {
+    color: #0F884E;
+    margin-right: 15px;
+}
+
+li.moni_up_content_list_items p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #403f3e;
+}
+
+.moni_up_content_list_items p {
+    line-height: 30px;
+}
+.moni_sign_up_account {
+    flex-basis: 50%;
+}
+.moni_sign_up_account_wrapper {
+    border-radius: 4px;
+    border: 1px solid var(--zds-colors-gray-20, #e6e6e6);
+    padding: 20px;
+    max-width: 430px;
+    margin:auto;
+}
+
+.moni_same_btn {
+    padding: 11px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.google{
+    background-color: rgb(66, 133, 244);
+    transition: .3s;
+}
+.google:hover{
+    background: #3367D6;
+}
+.fb{
+    background: #3B5999;
+}
+.microsoft{
+    background: #2d2e2e;
+    transition: .3s;
+}
+.microsoft:hover{
+    background: #403F3E;
+}
+
+.moni_same_btn a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fffdf9;
+}
+
+.moni_same_btn {
+    position: relative;
+}
+.moni_same_btn span i {
+    position: absolute;
+    left: 15px;
+    top: 9px;
+}
+.moni_same_btn a {
+    text-align: center;
+    display: block;
+}
+
+
+
+
+.moni_same_btn span i {
+    display: block;
+    background: #FFFDF9;
+    width: 30px;
+    height: 27px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 3px;  cursor: pointer;
+    color: #3367D6;
+    font-size: 18px;
+}
+
+
+
+.hr_section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.hr {
+    width: 45%;
+    height: 0;
+    border-top: 1px solid #E6E6E6;
+    opacity: .4;
+}
+
+.or {
+    padding: 0 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #757575;
+}
+
+
+.moni_email label {
+    color: #4F4E4D;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+.moni_required {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.moni_email input {
+    width: 100%;
+    border: 1px solid #95928e;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d2e2e;
+    background: #FFFDF9;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    transition: .2s;
+}
+
+.moni_email input:hover{
+    border: 1px solid #3B5999;
+}
+.moni_first_last_name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.moni_first_name {
+    flex-basis: 48%;
+}
+.moni_last_name {
+    flex-basis: 48%;
+}
+.moni_first_name label{
+    color: #4F4E4D;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+.moni_first_name input{
+    width: 100%;
+    border: 1px solid #95928e;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d2e2e;
+    background: #FFFDF9;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    transition: .2s;
+}
+.moni_first_name input:hover{
+    border: 1px solid #3B5999;
+}
+
+.moni_last_name label{
+    color: #4F4E4D;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+.moni_last_name input{
+    width: 100%;
+    border: 1px solid #95928e;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d2e2e;
+    background: #FFFDF9;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    transition: .2s;
+}
+.moni_last_name input:hover{
+    border: 1px solid #3B5999;
+}
+
+.moni_Get_Started_Free {
+    display: block;
+    background: #03989E;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFDF9;
+    padding: 12px 0px;
+    border-radius: 20px;
+    transition: .3s;
+    width: 100%;
+    border: 1px solid #03989E;
+}
+.moni_Get_Started_Free:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px
+}
+
+.moni_sign_up_link {
+    color: #403f3e;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.link_1 {
+    color: #3d4592;
+    text-decoration: underline;
+}
+.link_2 {
+    color: #3d4592;
+    text-decoration: underline;
+}
+.link_2:hover {
+    color: #2c3266;
+    text-decoration: underline;
+}
+.link_1:hover {
+    color: #2c3266;
+    text-decoration: underline;
+}
+/*===============sign up account section end======================*/

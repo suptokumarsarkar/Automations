@@ -1,0 +1,57 @@
+
+/*===============sign up account section responsive start======================*/
+
+@media (max-width:1024px) {
+    h2.moni_sign_up_content_title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    li.moni_up_content_list_items p {
+        font-size: 16px;
+    }
+    .moni_sign_up_account_wrapper {
+        border: none;
+    }
+
+    
+}
+
+@media (max-width:768px) {
+    
+.moni_signup_wrapper {
+    flex-direction: column;
+  }
+    
+.moni_sign_up_content_list {
+    display: none;
+  }
+  .moni_sign_up_content_title {
+    text-align: center;
+  }
+  .moni_sign_up_account_wrapper {
+    max-width: 100%;
+  }
+  .moni_sign_up_account {
+    width: 100%;
+  }
+  .moni_sign_up_link {
+    text-align: center;
+  }
+  
+.moni_same_btn a {
+    font-size: 16px;
+  }
+  
+.moni_first_last_name {
+    flex-direction: column;
+  }
+  .moni_first_name {
+    width: 100%;
+  }
+  .moni_last_name {
+    width: 100%;
+  }
+}
+
+/*===============sign up account section responsive end======================*/

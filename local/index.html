@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LightNit</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light  full-menu">
+        <div class="container-xl">
+            <a class="navbar-brand" href="#" aria-label="Go to the LightNit Homepage">
+                <svg width="120" height="60" fill="#ff4a00">
+                    <path d="M8.725 43.474l10.65-16.5H9.98a7.82 7.82 0 0 1-.104-1.566c-.017-.524.018-1.05.104-1.566h15.14l.2.522-10.756 16.5H24.6a7.82 7.82 0 0 1 .104 1.566 6.42 6.42 0 0 1-.104 1.462H8.83zm30.597-12.74a4.04 4.04 0 0 0-1.149-3.237 5.42 5.42 0 0 0-3.446-.94 20.34 20.34 0 0 0-2.611.209 14.82 14.82 0 0 0-2.297.522 5.8 5.8 0 0 1-.73-3.133 13.22 13.22 0 0 1 2.924-.627 15.81 15.81 0 0 1 3.133-.209 9 9 0 0 1 5.952 1.775c1.358 1.15 2.088 3.133 2.088 5.743v12.635l-3.342.627c-1.312.208-2.64.313-3.968.313-1.156.01-2.3-.096-3.446-.313a6.63 6.63 0 0 1-2.611-1.149 5.16 5.16 0 0 1-1.671-1.984 6.36 6.36 0 0 1-.627-2.924 5.31 5.31 0 0 1 .73-2.924 5.16 5.16 0 0 1 1.88-2.088 10.8 10.8 0 0 1 2.715-1.253c1.052-.3 2.143-.44 3.237-.418a12.03 12.03 0 0 1 2.088.104c.522 0 .94.104 1.358.104v-.835zm0 3.76c-.493-.025-.982-.095-1.462-.2-.627 0-1.15-.104-1.566-.104a6.46 6.46 0 0 0-3.76.94 3.23 3.23 0 0 0-1.253 2.715 3.05 3.05 0 0 0 1.462 2.924 3.28 3.28 0 0 0 1.462.418 7.38 7.38 0 0 0 1.462.104 11.35 11.35 0 0 0 1.88-.104l1.67-.313v-6.37zm8.145-10.652c.313 0 .522-.104.835-.104h1.67c.313 0 .522.104.835.104a2.09 2.09 0 0 1 .104.522c0 .313.104.522.104.835s.104.627.104.94c-.003.18.033.357.104.522l.94-1.253c.406-.405.862-.756 1.358-1.044 1.215-.673 2.58-1.03 3.968-1.044 1.1-.014 2.212.2 3.237.627a6.65 6.65 0 0 1 2.6 1.88 8.95 8.95 0 0 1 1.671 3.133 14.62 14.62 0 0 1 .627 4.49 11.36 11.36 0 0 1-2.819 8.145c-1.88 1.984-4.5 2.924-7.936 2.924a10.13 10.13 0 0 1-1.775-.104q-.94-.157-1.566-.313v9.294c-.313 0-.627.104-1.044.104h-1.88c-.313 0-.627-.104-.94-.104V23.842zM51.33 40.76a8.7 8.7 0 0 0 1.566.418 12.03 12.03 0 0 0 2.088.104c.9.023 1.774-.12 2.6-.418a4.5 4.5 0 0 0 1.984-1.358 7.6 7.6 0 0 0 1.358-2.402 10.88 10.88 0 0 0 .522-3.446 9.89 9.89 0 0 0-1.149-5.012c-.813-1.27-2.256-2-3.76-1.88a5.91 5.91 0 0 0-1.88.313 4.18 4.18 0 0 0-1.566 1.044 5.22 5.22 0 0 0-1.149 1.775c-.316.833-.458 1.72-.418 2.6v8.25zm19.006-13.9h-2.6a1.53 1.53 0 0 1-.104-.73v-1.67c0-.313.104-.522.104-.73h6.37v20.258c-.313 0-.627.104-.94.104h-1.88c-.313 0-.627-.104-.94-.104zm12.218 8.04c.104 2.193.627 3.864 1.67 4.804a6.65 6.65 0 0 0 4.804 1.566c1.817.01 3.622-.307 5.326-.94a4.77 4.77 0 0 1 .522 1.462 9.42 9.42 0 0 1 .21 1.67 11.14 11.14 0 0 1-2.819.835c-1.136.217-2.3.322-3.446.313a12.37 12.37 0 0 1-4.7-.73 11.15 11.15 0 0 1-3.237-2.297 8.71 8.71 0 0 1-1.88-3.342 13.47 13.47 0 0 1-.627-4.177c.006-1.408.18-2.8.522-4.177a9.4 9.4 0 0 1 1.775-3.342c.83-.933 1.82-1.7 2.924-2.297a9.69 9.69 0 0 1 4.386-.94 7.81 7.81 0 0 1 6.265 2.715 7.19 7.19 0 0 1 1.566 2.924c.392 1.213.57 2.485.522 3.76v1.15c0 .418-.104.73-.104 1.044zm10.025-2.924a6.75 6.75 0 0 0-.313-2.088 9.25 9.25 0 0 0-.835-1.775 4.25 4.25 0 0 0-1.462-1.253 4.4 4.4 0 0 0-2.088-.418 4.71 4.71 0 0 0-3.655 1.462 7.31 7.31 0 0 0-1.566 4.073zm8.145-8.144c.313 0 .522-.104.835-.104h1.67c.313 0 .522.104.835.104a6.32 6.32 0 0 1 .209 1.566 9.34 9.34 0 0 1 .104 1.67 6.58 6.58 0 0 1 2.193-2.297 6.08 6.08 0 0 1 3.446-.94h.627a.79.79 0 0 1 .522.104c0 .2.104.522.104.73v.835a2.9 2.9 0 0 1-.104.94c0 .313-.104.627-.104.94-.2 0-.418-.104-.627-.104h-.522a6.08 6.08 0 0 0-1.984.313 4.44 4.44 0 0 0-1.775 1.044 5.07 5.07 0 0 0-1.253 2.088 10.02 10.02 0 0 0-.418 3.342V44.1c-.313 0-.627.104-.94.104h-1.88c-.313 0-.73-.104-1.044-.104V23.842zm-22.87-11.894H74l2.715-2.715c-.2-.313-.418-.522-.627-.835a6.04 6.04 0 0 1-.835-.73L72.53 10.37V6.6a3.55 3.55 0 0 0-1.044-.104 3.23 3.23 0 0 0-1.044.104v3.864l-2.82-2.82a2.82 2.82 0 0 0-.835.731c-.2.313-.522.522-.73.835l2.715 2.715H65l-.104 1.044A3.23 3.23 0 0 0 65 14.023h3.864l-2.82 2.82c.413.62.945 1.154 1.566 1.566l2.715-2.715v3.864a3.55 3.55 0 0 0 1.044.104 3.23 3.23 0 0 0 1.044-.104v-3.864l2.715 2.715a2.82 2.82 0 0 0 .835-.731 5.85 5.85 0 0 0 .73-.835L74 14.13h3.864a3.55 3.55 0 0 0 .104-1.044 3.94 3.94 0 0 0-.104-1.15zm-4.804 1.044a5.21 5.21 0 0 1-.21 1.358c-.43.17-.895.24-1.358.2a5.21 5.21 0 0 1-1.358-.21c-.17-.43-.24-.895-.2-1.358a5.21 5.21 0 0 1 .21-1.358c.43-.17.895-.24 1.358-.2a5.21 5.21 0 0 1 1.358.21 6.11 6.11 0 0 1 .209 1.358z" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#">
+                            Products
+                        </a>
+                        <ul class="hover_menu">
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#">
+                            Explore
+                        </a>
+                        <ul class="hover_menu">
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Another</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#">
+                            Resources
+                        </a>
+                        <ul class="hover_menu">
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                            <li class="nav-item"><a class="nav-link hover_item" href="#">Action</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                </ul>
+                <span class="mx-3"><i class="fas fa-search"></i></span>
+                <!--
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+-->
+            </div>
+            <div class="login_btn">
+                <a href="#" class="btn btn-md">Login</a>
+                <a href="#" class="btn btn-md sign">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- about start -->
+    <section id="about_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="about-text">
+                        <h1>Automate your <span>Your to do list</span></h1>
+                        <p>LightNit empowers you to automate your work across 5,000+ apps—so you can move forward, faster.</p>
+                        <a href="#" class="btn">get started free</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about_img">
+                        <img src="images/banner1.png" class="h-100 w-100 img-fluid" alt="about image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about end -->
+
+    <!-- company start -->
+    <section id="company_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="company_head">
+                        <p>Trusted at companies large and small</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="company_img">
+                        <img src="images/companies4.png" class="img-fluid" alt="company 1">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="company_img">
+                        <img src="images/companies1.png" alt="company 1">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="company_img">
+                        <img src="images/companies3.png" alt="company 1">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="company_img">
+                        <img src="images/companies4.png" alt="company 1">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="company_img">
+                        <img src="images/companies5.png" alt="company 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- company end -->
+
+    <!-- feature start -->
+    <section id="feature_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="about-text feature_txt">
+                        <h1>Do what you do best, <span>let LightNit do the rest</span></h1>
+                        <div class="accro">
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            Automation for all
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            From side hustlers to enterprise leaders, LightNit connects your work apps so you get more focus and less frustration.
+                                            <a href="#">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            Marketing
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            From lead gen to customer emails, LightNit helps you manage your entire funnel—so you get more conversions and less chaos.
+                                            <a href="#">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Business owner
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                        <div class="accordion-body">
+                                            From marketing to contracts, LightNit streamlines your business ops—so you grow more and grumble less.
+                                            <a href="">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">See how LightNit works</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="feature_bg">
+                        <img src="images/feature1.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="feature2_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="about-text feature_txt">
+                        <h1>Start simple, scale to <span>sophistication</span></h1>
+                        <div class="accro">
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            Multi-step workflows
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            Create automated workflows that do more than just one thing—up to 100 steps, to be specific.
+                                            <a href="#">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            Conditional logic
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            Add customized if/then logic to your workflows so they work exactly how you would—but automatically.
+                                            <a href="#">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Data formatting
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                        <div class="accordion-body">
+                                            Transform data from one app into the right format before passing it on to another app. No data science degree required!
+                                            <a href="">learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">Discover more features</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="feature_bg feature2">
+                        <img src="images/feature2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- feature end -->
+
+    <!--automation part start-->
+    <section id="automation_part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="auto_head text-center">
+                        <h2>This is what automation feels like</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="slider">
+                <div class="col-md-4 me-3">
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team1.jpg" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team2.png" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                 <div class="col-md-4 me-3">
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team1.jpg" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team2.png" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                 <div class="col-md-4 me-3">
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team1.jpg" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team2.png" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                 <div class="col-md-4 me-3">
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team1.jpg" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <div class="slide_txt">
+                                    <div class="slide_img">
+                                        <img src="images/team2.png" alt="team image">
+                                    </div>
+                                    <div class="slide_cont">
+                                        <p>Aravind Venugopal</p>
+                                        <span>@AravindV1444</span>
+                                    </div>
+                                    <p><a href="#">@LightNit</a> is one of the best things that I have discovered till now. It's time to automate my imagination 🥳</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--automation part end-->
+
+    <!-- customer start -->
+    <section id="customer_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="customer_lft">
+                        <h2>From what if to what’s next</h2>
+                        <p>LightNit users automate their way to awesome every day. But don’t take our word for it!</p>
+                        <a href="#">Meet our customer</a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="customer_right">
+                                <div class="right_img">
+                                    <img src="images/customer1.jpg" class="img-fluid" alt="customer image">
+                                    <div class="pos_img">
+                                        <img src="images/cus-min1.jpg" class="img-fluid" alt="min image">
+                                    </div>
+                                </div>
+                                <div class="right_txt">
+                                    <p>"Because of LightNit, all of the account managers are able to focus their time on key accounts and the channel strategy that drives revenue growth.” </p>
+                                    <p class="right_p">Alicia Roberts, Key Account Sales Manager at Fellow Products</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="customer_right">
+                                <div class="right_img">
+                                    <img src="images/customer2.jpg" class="img-fluid" alt="customer image">
+                                    <div class="pos_img">
+                                        <img src="images/cus-min2.jpg" class="img-fluid" alt="min image">
+                                    </div>
+                                </div>
+                                <div class="right_txt">
+                                    <p>"Because of LightNit, all of the account managers are able to focus their time on key accounts and the channel strategy that drives revenue growth.” </p>
+                                    <p class="right_p">Alicia Roberts, Key Account Sales Manager at Fellow Products</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="customer_right">
+                                <div class="right_img">
+                                    <img src="images/customer3.png" class="img-fluid" alt="customer image">
+                                    <div class="pos_img">
+                                        <img src="images/cus-min3.jpg" class="img-fluid" alt="min image">
+                                    </div>
+                                </div>
+                                <div class="right_txt">
+                                    <p>"Because of LightNit, all of the account managers are able to focus their time on key accounts and the channel strategy that drives revenue growth.” </p>
+                                    <p class="right_p">Alicia Roberts, Key Account Sales Manager at Fellow Products</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="customer_right">
+                                <div class="right_img">
+                                    <img src="images/customer4.jpg" class="img-fluid" alt="customer image">
+                                    <div class="pos_img">
+                                        <img src="images/cus-min4.jpg" class="img-fluid" alt="min image">
+                                    </div>
+                                </div>
+                                <div class="right_txt">
+                                    <p>"Because of LightNit, all of the account managers are able to focus their time on key accounts and the channel strategy that drives revenue growth.” </p>
+                                    <p class="right_p">Alicia Roberts, Key Account Sales Manager at Fellow Products</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- customer end -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/fontawsome.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

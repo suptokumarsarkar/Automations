@@ -1,0 +1,189 @@
+.modal_f12 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+#modal_2356 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#modal_2356 .moni_248_model_wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+#modal_2356 .moni_248_model_header_row {
+    background: #1f3121;
+    display: flex;
+    align-items: center;
+    color: wheat;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+#modal_2356 .moni_248_model_header_left_col {
+    /*! flex-basis: 90%; */
+    display: flex;
+    align-items: center;
+}
+#modal_2356 .moni_248_model_header_left_col_icon_wrapper {
+}
+#modal_2356 .moni_248_model_header_left_col_icon_tag_content_title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 35px;
+    color: #fffdf9;
+    margin-bottom: 5px;
+}
+#modal_2356 .moni_248_model_header_left_col_icon_tag_content_about {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #fffdf9;
+}
+#modal_2356 .moni_248_model_header_left_col_icon_tag_content {
+    margin-left: 20px;
+}
+
+
+#modal_2356 .moni_248_model_header_left_col_icon_wrapper {
+    width: 60px;
+    height: 60px;
+    background: #95ffa1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.overflow_99_fcq{
+    position: fixed;
+    background: #ccccccaa;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+#modal_2356{
+    position:  fixed;
+    width: 600px;
+    top: 40px;
+    left: calc(50% - 300px);
+    bottom: 40px;
+    z-index: 100;
+    max-width: 100%;
+}
+
+@media(max-width: 788px)
+{
+    #modal_2356{
+        left: 0;
+    }
+}
+
+#modal_2356 .moni_248_model_main_row {
+    background: #fffdf9;
+    padding: 25px 30px;
+}
+#modal_2356 .moni_248_model_main_first_content {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#modal_2356 .moni_248_model_main_first_content_title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2d2e2e;
+}
+#modal_2356 .moni_248_model_main_first_content_about {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2d2e2e;
+}
+#modal_2356 .moni_248_model_main_input_box_wrapper {
+    position: relative;
+    width: 100%;
+}
+#modal_2356 .moni_248_model_main_input_box_wrapper input {
+    width: 100%;
+    padding: 10px 45px;
+    border: 1px solid #2d2e2e;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+#modal_2356 .moni_248_model_main_search_icon {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+#modal_2356 .moni_248_model_main_minimize_icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#modal_2356 .moni_248_model_main_input_box_wrapper label {
+    width: 100%;
+}
+
+
+#modal_2356 .moni_248_model_main_apps_row {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#modal_2356 .moni_248_model_main_apps_col {
+    flex-basis: 48%;
+    margin-bottom: 15px;
+}
+#modal_2356 .moni_248_model_main_apps_col_wrapper {
+    display: flex;
+    align-items: center;
+    border: solid #e6e6e6 1px;
+    background-color: #fffdf9;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+#modal_2356 .moni_248_model_main_apps_col_wrapper:hover{
+    border: solid #e6e6e6 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px 0;
+    background-color: #fffdf9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#modal_2356 .moni_248_model_main_apps_apps_icon {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+#modal_2356 .moni_248_model_main_apps_apps_icon img{
+    width: 30px;
+    height: 30px;
+}
+#modal_2356 .moni_248_model_main_apps_apps_icon_tag {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #2d2e2e;
+}
+#modal_2356 .moni_248_model_header_right_col {
+    cursor: pointer;
+}

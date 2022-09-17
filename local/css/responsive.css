@@ -1,0 +1,60 @@
+@media (min-width: 1200px) {}
+
+@media (max-width: 1199.98px) {
+    .about-text h1 {
+        font-size: 36px;
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about_img {
+        position: static;
+        width: 100%;
+    }
+
+    .feature_bg {
+        position: static;
+        width: 100%;
+    }
+
+    .feature_bg img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .company_img img {
+        width: 90%;
+    }
+    .auto_head h2 {
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+    #automation_part {
+	padding: 60px 0;
+}
+}
+
+@media (max-width: 575.98px) {
+    .about-text h1 {
+        font-size: 28px;
+        padding: 40px 0;
+    }
+
+    .company_img {
+        margin-bottom: 20px;
+    }
+
+    .company_img img {
+        width: 30%;
+    }
+    #customer_part {
+	padding: 40px 0;
+}
+    .customer_lft h2 {
+	font-size: 35px;
+	margin-top: 30px;
+}
+    
+}

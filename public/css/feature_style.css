@@ -1,0 +1,333 @@
+/*=========google font==============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+/*=========common css start=========*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+/*===================common css end=========================*/
+
+
+/*===============automation section start===================*/
+
+#moni_automation {
+
+    background: #FFFDF9;
+}
+.moni_automation_wrapper {
+    background: #FFF3E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 60px 20px;
+}
+.moni_automation {
+    text-align: center;
+}
+.moni_automation .moni_automation_title {
+    color: #FF4F00;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.moni_automation_btn .moni_automation_link {
+    background: #403F3E;
+    color: #fffdf9;
+    font-size: 22px;
+    padding: 20px 30px;
+    font-weight: 500;
+    display: inline-block;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+}
+.moni_automation_btn .moni_automation_link:hover {
+    background: #2C3266;
+}
+.moni_arrow {
+    margin-left: 5px;
+}
+
+/*===============automation section start===================*/
+
+
+
+/*===============point section start========================*/
+
+#moni_point {
+    padding: 120px 30px;
+    background: linear-gradient( to bottom, #03989E 55%, #FFFDF9 45% );
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.moni_point_img {
+    max-width: 100%;
+    width: 770px;
+    margin: auto;
+}
+.moni_point_img img {
+    width: 100%;
+}
+.moni_point {
+    max-width: 100%;
+    width: 770px;
+    margin: auto;
+}
+.moni_point_title {
+    font-size: 55px;
+    line-height: 60px;
+    color: #FFF3E6;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.moni_point_description {
+    color: #fff3e6;
+    max-width: 570px;
+    margin: 0px auto 40px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/*===============point section end================================*/
+
+/*===============great_flexibility_section start ===================*/
+
+#moni_great_flexibility {
+    background: #f6f6f86e;
+    padding: 50px 30px;
+}
+.moni_flexibility_title_wrapper {
+    width: 100%;
+    margin-bottom: 100px;
+    text-align: center;
+
+}
+.moni_flexibility_title{
+    font-size: 48px;
+    line-height: 55px;
+    color: #2d2e2e;
+    font-weight: 600;
+}
+.moni_great_flexibility_three_section_wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.moni_great_flexibility_tree_section_wrapper {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 140px;
+}
+.moni_great_flexibility_tree_section_wrapper:last-child {
+    margin-bottom: 0;
+}
+.moni_great_flexibility_three_section_content {
+    flex-basis: 50%;
+    max-width: 500px;
+    margin-top: 45px;
+}
+.moni_great_flexibility_three_section_img_wrapper {
+    flex-basis: 50%;
+    margin-left: auto;
+    max-width: 500px;
+}
+img.moni_great_flexibility_three_section_img {
+    width: 100%;
+    border-radius:3px;
+}
+h2.moni_great_flexibility_three_section_content_title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2d2e2e;
+    line-height: 48px;
+    margin-bottom: 25px;
+}
+.moni_great_flexibility_three_section_content_description p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2d2e23;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+.moni_great_flexibility_three_section_content_btn a {
+    display: inline-block;
+    background: #03989E;
+    height: 50px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fffdf9;
+    border: 1px solid #03989E;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.moni_great_flexibility_three_section_content_btn a:hover {
+    background: #03989ECF;
+    box-shadow: 0px 2px 1px 2px #F0F1FA;
+    border: 1px solid #03989ECF;
+}
+.order_change {
+    order: 2;
+    margin-left: auto;
+}
+.img {
+    margin-left: -85px;
+}
+
+/*===============great_flexibility_section end ===================*/
+
+/*=================video section start ===========================*/
+
+#moni_video_section {
+    background: #03989E;
+    padding: 70px 30px;
+}
+.moni_video_section_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+h2.moni_video_section_title {
+    font-size: 55px;
+    color: #FFFDF9;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.moni_video_section_description p {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #FFFDF9;
+}
+.moni_vieo_section p a img {
+    max-width: 100%;
+}
+.moni_vieo_section {
+    margin-top: 50px;
+}
+/*===============video section end =====================*/
+
+/*===============trust section start ===================*/
+
+div#moni_trust_section {
+    padding: 50px 30px;
+    background: #FFFDF9;
+}
+h2.moni_trust_section_left_title {
+    font-size: 40px;
+    line-height: 45px;
+    max-width: 310px;
+    color: #31201F;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.moni_trust_section_left_description p {
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+}
+.moni_trust_icon i {
+    font-size: 45px;
+    margin-bottom: 14px;
+    color: #FF4F00;
+}
+h3.moni_trust_section_right_inner_card_title {
+    font-size: 24px;
+    line-height: 32px;
+    color: #2d2e2e;
+    margin-bottom: 8px;
+}
+p.moni_trust_section_right_inner_card_description {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2d2e2e;
+    line-height: 28px;
+}
+.moni_trust_section_wrapper {
+    display: flex;
+}
+.moni_trust_left_section {
+    flex-basis: 50%;
+}
+.moni_trust_right_section_wrapper {
+    flex-basis: 50%;
+}
+.moni_trust_right_section {
+    margin-bottom: 100px;
+    gap: 60px;
+    flex-basis: 50%;
+    display: flex;
+
+}
+.moni_trust_right_section_divs {
+    flex-basis: 50%;
+}
+a.under_line {
+    text-decoration: underline;
+    transition: .2s;
+    color: #3d4592;
+}
+
+a.under_line:hover {
+    color: #2c3266;
+}
+.moni_trust_right_section:last-child {
+    margin-bottom: 0;
+}
+/*===============trust section end ===================*/

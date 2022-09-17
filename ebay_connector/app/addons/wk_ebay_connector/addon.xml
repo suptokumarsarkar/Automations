@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>wk_ebay_connector</id>
+    <name>Hypd4 Ebay Connector</name>
+    <version>2.1</version>
+    <priority>190000</priority>
+    <position>10</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <supplier>Hypd4 Marketplace</supplier>
+    <supplier_link>https://hypd4.com</supplier_link>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+
+
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="ebay_devId">
+                        <name>Ebay DevID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+
+                    <item id="ebay_appId">
+                        <name>Ebay AppID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+
+                    <item id="ebay_certId">
+                        <name>Ebay CertID</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+
+                    <item id="ebay_redirectName">
+                        <name>Redirect Name</name>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+					 <item id="csCart_defaultCategory">
+                        <name>Default Category Id</name>
+						 <descriptions>You can find it on category page -> category link</descriptions>
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+
+                    <item id="ebay_mode">
+                        <name>Select Mode</name>
+                        <type>selectbox</type>
+                        <default_value>S</default_value>
+                        <variants>
+                            <item id="S">
+                                <name>Sandbox</name>
+                            </item>
+                            <item id="P">
+                                <name>Production</name>
+                            </item>
+                        </variants>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+
+    <functions>
+        <item for="install">fn_wk_ebay_connector_install</item>
+    </functions>
+    <queries>
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_account_list;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_account_list` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `app_id` varchar(255) NOT NULL,
+                `cert_id` varchar(250) NOT NULL,
+                `oauth_token` text NOT NULL,
+                `refresh_token` text NOT NULL,
+                `expired_at` text NOT NULL,
+                `token_updated_at` text NOT NULL,
+                `token_created_at` text NOT NULL,
+                `company_id` int(11) NOT NULL,
+                `ebay_dev_id` varchar(255) NOT NULL,
+                `shop_name` varchar(55) NOT NULL,
+                `status` char(1) NOT NULL DEFAULT 'A',
+                `currency_code` char(4) NOT NULL DEFAULT '',
+                `is_quantity_update` char(1) NOT NULL DEFAULT 'N',
+                `is_full_product_update` char(1) NOT NULL DEFAULT 'N',
+                `is_export_product_update` char(1) NOT NULL DEFAULT 'N',
+                `is_import_product_update` char(1) NOT NULL DEFAULT 'N',
+                `default_is_supply` char(1) NOT NULL DEFAULT 'N',
+                `default_when_made` varchar(25) NOT NULL DEFAULT 'made_to_order',
+                `default_who_made` varchar(25) NOT NULL DEFAULT 'i_did',
+                `default_listing_state` varchar(10) NOT NULL DEFAULT 'draft',
+                `default_cscart_category_id` int(11) NOT NULL DEFAULT 0,
+                `default_ebay_category_id` int(11) NOT NULL DEFAULT 0,
+                `default_shipping_template_id` bigint(15) NOT NULL DEFAULT 0,
+                `timestamp` int(11) NOT NULL,
+                `default_payment` int(11) NOT NULL default 0,
+                `default_shipping` int(11) NOT NULL default 0,
+                UNIQUE KEY (`company_id`,`ebay_dev_id`),
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_account_list;</item>
+		
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_email_sent;</item>
+
+		<item for="install">
+			CREATE TABLE `?:wk_ebay_email_sent` ( `id` INT NOT NULL AUTO_INCREMENT , `account_id` TEXT NOT NULL , `email_about` TEXT NOT NULL , `sentTime` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_email_sent;</item>
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_email_sent;</item>
+        <item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_shop` (
+                `account_id` int(11) NOT NULL,
+                `shop_id` int(11) NOT NULL,
+                `shop_name` varchar(255) NOT NULL,
+                `title` varchar(255) NOT NULL,
+                `banner_image` varchar(255) NOT NULL,
+                `announcement` text NOT NULL,
+                `sale_message` text NOT NULL,
+                `digital_sale_message` text NOT NULL,
+                `policy_welcome` text NOT NULL,
+                `policy_payment` text NOT NULL,
+                `policy_shipping` text NOT NULL,
+                `policy_refunds` text NOT NULL,
+                `policy_additional` text NOT NULL,
+                `policy_seller_info` text NOT NULL,
+                `curreny_code` varchar(15) NOT NULL,
+                `url` varchar(255) NOT NULL,
+                `timestamp` int(11) NOT NULL,
+                PRIMARY KEY (`account_id`,`shop_id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_shop;</item>
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_countries;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_countries` (
+                `country_id` int(11) NOT NULL,
+                `iso_country_code` char(2) NOT NULL,
+                `world_bank_country_code` char(3) NOT NULL,
+                `name` varchar(255) NOT NULL,
+                `slug` varchar(255) NOT NULL,
+                `lat` decimal(10,2) NULL NULL,
+                `lon` decimal(10,2) NULL NULL,
+                PRIMARY KEY (`country_id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_countries;</item>
+
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_category_map;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_category_map` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `category_id` int(15) NOT NULL,
+                `ebay_category_id` int(15) NOT NULL,
+                `ebay_category` varchar(255) NOT NULL,
+                `account_id` int(10) NOT NULL,
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_category_map;</item>
+
+                <item for="install">DROP TABLE IF EXISTS ?:wk_ebay_feature_map;</item>
+		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_feature_map` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `account_id` int(11) NOT NULL,
+                `product_id` bigint(15) NOT NULL,
+                `listing_id` bigint(15) NOT NULL,
+                `ebay_prop_id` bigint(15) NOT NULL,
+                `csart_feature_id` bigint(15) NOT NULL,
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_feature_map;</item>
+
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_product_map;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_product_map` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `account_id` int(11) NOT NULL,
+                `parent_product_id` bigint(15) NOT NULL,
+                `product_id` bigint(15) NOT NULL,
+                `listing_id` bigint(15) NOT NULL,
+                `action` char(1) NOT NULL DEFAULT 'I',
+                `price` decimal(10,2) DEFAULT '0.0',
+                `amount` int(10) DEFAULT 0,
+                `category_id` int(11) DEFAULT 0,
+                `who_made` varchar(20) DEFAULT 'i_did',
+                `when_made` varchar(20) DEFAULT 'made_to_order',
+                `is_supply` varchar(5),
+                `recipient` varchar(25),
+                `occasion` varchar(25),
+                `listing_data` text NOT NULL,
+                `map` char(1) NOT NULL DEFAULT 'Y',
+                `state` varchar(15) NOT NULL DEFAULT 'active',
+                `ebay_variation_id` bigint(15) NOT NULL,
+                `combination_key` bigint(15) NOT NULL,
+                UNIQUE KEY (`product_id`,`listing_id`),
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_product_map;</item>
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_product_export_raw;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_product_export_raw` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `product_id` int(15) NOT NULL,
+                `data` text,
+                UNIQUE KEY (`product_id`),
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_product_export_raw;</item>
+
+        <item>DROP TABLE IF EXISTS ?:wk_ebay_seller_categories;</item>
+		<item>
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_seller_categories` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `account_id` int(5) NOT NULL,
+                `categories` longtext,
+                UNIQUE KEY (`account_id`),
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+		</item>
+		<item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_seller_categories;</item>
+
+
+
+        <item for="install">
+            ALTER TABLE ?:products ADD `ebay_product_id` text;
+        </item>
+        <item for="uninstall">
+            ALTER TABLE ?:products DROP `ebay_product_id`;
+        </item>
+
+        <item for="install">
+            ALTER TABLE ?:products ADD `ebay_listing_id` text;
+        </item>
+        <item for="uninstall">
+            ALTER TABLE ?:products DROP `ebay_listing_id`;
+        </item>
+
+        <item for="install">
+            ALTER TABLE ?:products ADD `ebay_sku` text;
+        </item>
+        <item for="uninstall">
+            ALTER TABLE ?:products DROP `ebay_sku`;
+        </item>
+		
+        <item for="install">
+            ALTER TABLE ?:products ADD `ebay_account_id` INT(11) unsigned NOT NULL default 0;
+        </item>
+
+        <item for="install">
+            ALTER TABLE ?:products ADD `ebay_is_parent` char(1) NOT NULL DEFAULT 'Y';
+        </item>
+
+        <item for="uninstall">
+            ALTER TABLE ?:products DROP `ebay_is_parent`;
+        </item>
+
+        <item for="uninstall">
+            ALTER TABLE ?:products DROP `ebay_account_id`;
+        </item>
+
+        <item for="install">DROP TABLE IF EXISTS ?:wk_ebay_order_map;</item>
+        <item for="install">
+			CREATE TABLE IF NOT EXISTS `?:wk_ebay_order_map` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `account_id` int(11) NOT NULL,
+                `order_id` bigint(15) NOT NULL,
+                `ebay_order_total` decimal(12,2) NOT NULL,
+                `financial_status` text NULL,
+                `currency` char(3) NULL,
+                `ebay_order_id` text NULL,
+                PRIMARY KEY (`id`)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:wk_ebay_order_map;</item>
+
+        <item for="install" editions="MULTIVENDOR,ULTIMATE">
+            REPLACE INTO ?:privileges (privilege, is_default, section_id) VALUES ('manage_wk_ebay_connector', 'Y', 'addons');
+        </item>
+		
+
+        <item for="install" editions="MULTIVENDOR,ULTIMATE">
+            REPLACE INTO ?:privileges (privilege, is_default, section_id) VALUES ('view_wk_ebay_connector', 'Y', 'addons');
+        </item>
+		
+        <item for="install" editions="MULTIVENDOR,ULTIMATE">
+            REPLACE INTO ?:language_values (`lang_code`, `name`, `value`) VALUES ('en', 'ebay', 'Ebay');
+        </item>
+		
+       
+		
+        <item for="install" editions="MULTIVENDOR,ULTIMATE">
+            REPLACE INTO ?:language_values (`lang_code`, `name`, `value`) VALUES ('en', 'wk_ebay', 'Ebay Connector');
+        </item>
+		
+
+		
+		<item for="install" editions="MULTIVENDOR,ULTIMATE">
+            REPLACE INTO ?:language_values (`lang_code`, `name`, `value`) VALUES ('en', 'wk_ebay_connector', 'Ebay Connector');
+        </item>
+        <item for="uninstall" editions="MULTIVENDOR,ULTIMATE">
+            DELETE FROM ?:privileges WHERE privilege IN ('manage_wk_ebay_connector', 'view_wk_ebay_connector');
+        </item>
+    </queries>
+
+</addon>

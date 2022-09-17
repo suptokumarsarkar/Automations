@@ -1,0 +1,142 @@
+
+/*--================apps work section responsive start=============-*/
+
+
+@media (max-width:1150px) {
+  .moni_apps_work_sort_by_col {
+      display: none;
+    }
+    
+.moni_apps_work_most_populor_apps_wrapper_row {
+  padding: 0;
+}
+
+.display_none_1 {
+  display: none;
+}
+}
+@media (max-width:700px) {
+  .moni_most_apps_card_wrapper_row {
+      flex-direction: column;
+    }
+    .moni_most_apps_card_col {
+      flex-basis: 100%;
+    }
+    
+.display_none_2 {
+  display: none;
+}
+
+.moni_category_app_table_row {
+  flex-direction: column;
+}
+.moni_category_app_table_col {
+  flex-basis: 100%;
+}
+
+.moni_category_app_tabble_btn a {
+  width: 100%;
+}
+
+.moni_category_app_table_row {
+  padding: 20px 0;
+}
+.moni_catetory_app_tabble_heading {
+  margin-top: 30px;
+}
+
+.moni_category_featured_apps_col {
+  height: 185px;
+}
+.moni_apps_work_most_populor_apps_heading {
+  margin-bottom: 20px;
+}
+
+.moni_most_apps_card_img_wrapper img {
+width: 30px !important;
+height: 30px !important;
+}
+.moni_most_apps_card_img_wrapper {
+width: 40px;
+height: 40px;
+}
+.moni_most_apps_card_col_wrapper {
+padding: 5px;
+}
+.des {
+  display: none;
+}
+.display_none_block {
+  display: block;
+}
+.moni_most_apps_card_col_wrapper {
+  border-radius: 5px;
+  padding: 10px 15px;
+  max-height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+}
+
+
+/*--================apps work section responsive end=============--*/
+
+
+/*=====================footer section responsive start=================================*/
+
+
+
+@media (max-width:640px) {
+
+    .footer-copy-right-wrapper {
+        flex-direction: column;
+    }
+    
+    .footer-copy-right-img img {
+        margin-bottom: 40px;
+    }
+    
+    .footer-copy-right-link {
+        flex-direction: column;
+    }
+    
+    .copy-right {
+        margin-bottom: 15px;
+    }
+    .footer-link-wrapper {
+      
+        flex-direction: column;
+    }
+    .footer-linkIcon li {
+        padding: 0px 6px;
+      }
+      
+.footer-copy-right-img svg {
+    margin-bottom: 20px;
+  }
+  
+.footer-linkIcon-wrapper {
+    order: 2;
+  }
+  .footer-link-wrapper {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width:1024px) {
+
+    .footer-linkIcon-link-wrapper {
+        flex-direction: column;
+    }
+    .footer-link-wrapper {
+        justify-content: center;
+    }
+    .footer-link-wrapper li {
+        line-height: 35px;
+    }
+    
+}
+/*=========footer section responsive end===========*/

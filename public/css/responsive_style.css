@@ -1,0 +1,186 @@
+/*===============automation section responsive start===================*/
+
+@media (max-width:1024px) {
+    
+.moni_automation .moni_automation_title {
+    font-size: 40px;
+    max-width: 448px;
+    line-height: 45px;
+    margin: 0 auto 32px;
+  }
+  .moni_automation_btn .moni_automation_link {
+    font-size: 18px;
+    padding: 20px 25px;
+}
+}
+
+@media (max-width:600px) {
+  .moni_automation_btn .moni_automation_link {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
+
+/*===============automation section responsive start===================*/
+
+/*===============point section responsive start========================*/
+
+@media (max-width:768px) {
+  #moni_point {
+    padding: 70px 30px;
+    background: linear-gradient( to bottom, #FF4F00 65%, #FFFDF9 35% );
+    text-align: center;
+  }
+.moni_point_title {
+  font-size: 40px;
+  line-height: 55px;
+}
+}
+
+/*======================point section responsive end===========================*/
+
+
+
+/*===============great_flexibility_section responsive start ===================*/
+
+@media (max-width:1024px) {
+.moni_great_flexibility_three_section_content {
+  flex-basis: 100%;
+  order: 2;
+  max-width: 100%;
+}
+.moni_great_flexibility_three_section_img_wrapper {
+  flex-basis: 100%;
+  order: 1;
+  margin-bottom: 30px;
+  max-width: none;
+}
+img.moni_great_flexibility_three_section_img {
+  width: 100%;
+  border-radius: 3px;
+}
+.moni_flexibility_title{
+  font-size: 40px;
+  line-height: 45px;
+}
+h2.moni_great_flexibility_three_section_content_title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2d2e2e;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+.img {
+  margin-left: 0px;
+}
+.moni_great_flexibility_tree_section_wrapper {
+  margin-bottom: 90px;
+}
+#moni_point {
+  margin-top: 70px;
+}
+
+}
+
+
+@media (max-width:640px) {
+  h2.moni_great_flexibility_three_section_content_title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d2e2e;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+  .moni_great_flexibility_three_section_content_btn a {
+    display: inline-block;
+    background: transparent;
+    height: 50px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3d4592;
+    border: 1px solid #3d4592;
+    border-radius: 3px;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+  }
+  #moni_point {
+    margin-top: 30px;
+  }
+  
+}
+
+/*===============great_flexibility_section responsive end ===================*/
+
+
+/*===============video section responsive start =============================*/
+@media (max-width:768px) {
+  h2.moni_video_section_title {
+    font-size: 40px;
+    color: #FFFDF9;
+    font-weight: 600;
+    line-height: 45px;
+    /* text-align: center; */
+    margin-bottom: 16px;
+  }
+  .moni_video_section_description p {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #FFFDF9;
+  }
+}
+@media (max-width:600px) {
+  h2.moni_video_section_title {
+    font-size: 32px;
+    color: #FFFDF9;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 8px;
+  }
+  .moni_video_section_description p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #FFFDF9;
+  }
+}
+/*===============video_section responsive end =====================*/
+
+/*===============trust section responsive start ===================*/
+@media (max-width:1024px) {
+  
+.moni_trust_section_wrapper {
+  flex-direction: column;
+  text-align: center;
+}
+.moni_trust_section_left_title {
+  flex-basis: 100%;
+  max-width: none;
+}
+.moni_trust_left_section {
+  margin-bottom: 80px;
+}
+
+h2.moni_trust_section_left_title {
+  font-size: 40px;
+  line-height: 45px;
+  max-width: 100%;
+  color: #31201F;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.moni_trust_section_left_description p {
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+}
+@media (max-width:640px) {
+  .moni_trust_right_section {
+    flex-direction: column;
+}
+}
+/*===============trust section responsive end ===================*/
