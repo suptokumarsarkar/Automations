@@ -34,6 +34,8 @@ Route::post('microsoft-login',[MicrosoftAuth::class, 'login'])->name('MicrosoftL
 Route::get('apps', [\App\Http\Controllers\Api\Apps\Manager::class, 'getApps'])->name('getApps');
 Route::post('getApp', [\App\Http\Controllers\Api\Apps\Manager::class, 'getApp'])->name('getApp');
 
+Route::post('getExtraDataFields', [\App\Http\Controllers\Api\Apps\Manager::class, 'getExtraDataField'])->name('getExtraDataField');
+Route::post('getExtraDataFields/{id}/{app}', [\App\Http\Controllers\Api\Apps\Manager::class, 'getExtraDataFields'])->name('getExtraDataFields');
 Route::post('create-app', [\App\Http\Controllers\Api\Apps\Manager::class, 'createApp'])->name('createApp');
 Route::post('check-trigger', [\App\Http\Controllers\Api\Apps\Manager::class, 'checkTrigger'])->name('checkTrigger');
 Route::post('get-action-form', [\App\Http\Controllers\Api\Apps\Manager::class, 'getActionForm'])->name('getActionForm');

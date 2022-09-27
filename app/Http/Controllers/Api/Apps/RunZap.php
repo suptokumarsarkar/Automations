@@ -35,6 +35,7 @@ class RunZap extends Controller
                             // Check The Api Actions
 
                             $funcData = $manager->freshArrayApi($funcData);
+
                             if (!$manager->checkApiMatch($value['api'], $funcData)) {
                                 return json_encode([
                                     'status' => 400,
@@ -46,7 +47,6 @@ class RunZap extends Controller
                         }
 
                         Helpers::stringValueFillup($mainData, $value);
-
 
 
                         $action_data = $manager->runZap($mainData, $data, $zap->userId);

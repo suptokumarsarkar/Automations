@@ -1115,6 +1115,7 @@ function fn_update_ebay_product_data_on_store($product_info = array(), $product_
         //}
 
         fn_wk_ebay_create_or_update_features($variants['VariationSpecificsSet']);
+        fn_wk_ebay_create_or_update_brands($product_info['ProductListingDetails']['BrandMPN']);
         $parentId = 0;
         $product_id = 0;
         $groupId = 0;
@@ -1149,6 +1150,13 @@ function fn_update_ebay_product_data_on_store($product_info = array(), $product_
                 $featureId = db_get_row("SELECT feature_id FROM ?:product_features_descriptions WHERE internal_name = '" . str_replace("'", "\'", $variant['VariationSpecifics']['NameValueList']['Name']) . "'");
             }
 
+            if(isset($product_info['ProductListingDetails']['BrandMPN']))
+            {
+                $databases2 = db_get_fields("SELECT variant_id FROM ?:product_feature_variant_descriptions WHERE variant = '" .$product_info['ProductListingDetails']['BrandMPN']['Brand'] . "'");
+                $featureId2= db_get_row("SELECT feature_id FROM ?:product_features_descriptions WHERE internal_name = 'Brands'");
+            }
+
+
 
             $database = 0;
 
@@ -1160,12 +1168,27 @@ function fn_update_ebay_product_data_on_store($product_info = array(), $product_
                 }
             }
 
+            $database2 = 0;
+
+            foreach ($databases2 as $varient_id2) {
+                $recheck2 = db_get_field("SELECT variant_id FROM ?:product_feature_variants WHERE variant_id = '" . $varient_id2 . "' AND feature_id = '" . $featureId2['feature_id'] . "'");
+                if ($recheck2) {
+                    $database2 = $recheck2;
+                    break;
+                }
+            }
+
 
             $product_idValue = fn_update_product($product_data, 0, DESCR_SL);
             $haveLinked = db_query("INSERT INTO ?:product_features_values (`feature_id`, `product_id`, `variant_id`, `value`, `value_int`, `lang_code`) VALUES ('" . $featureId['feature_id'] . "', '" . $product_idValue . "', '" . $database . "', '', NULL, 'en') ");
+            foreach($product_info['ProductListingDetails']['BrandMPN'] as $brand)
+            {
+                $haveLinked = db_query("INSERT INTO ?:product_features_values (`feature_id`, `product_id`, `variant_id`, `value`, `value_int`, `lang_code`) VALUES ('" . $featureId2['feature_id'] . "', '" . $product_idValue . "', '" . $database2 . "', '', NULL, 'en') ");
+            }
             if ($key == 0) {
                 $groupId = db_query("INSERT INTO ?:product_variation_groups (`id`, `code`, `created_at`, `updated_at`) VALUES (NULL, '" . $groupCode . "', '" . time() . "', '" . time() . "') ");
                 $addFeature = db_query("INSERT INTO ?:product_variation_group_features (`feature_id`, `purpose`, `group_id`) VALUES ('" . $featureId['feature_id'] . "', 'group_variation_catalog_item', '" . $groupId . "') ");
+                $addFeature2 = db_query("INSERT INTO ?:product_variation_group_features (`feature_id`, `purpose`, `group_id`) VALUES ('" . $featureId2['feature_id'] . "', 'group_variation_catalog_item', '" . $groupId . "') ");
             }
             $addProductToGroup = db_query("INSERT INTO ?:product_variation_group_products (`product_id`, `parent_product_id`, `group_id`) VALUES ('" . $product_idValue . "', '" . $parentId . "', '" . $groupId . "') ");
 
@@ -1433,10 +1456,43 @@ function fn_wk_ebay_create_or_update_features($features)
 
 }
 
+function fn_wk_ebay_create_or_update_brands($brands)
+{
+    foreach ($brands as $feature) {
+        // check if feature exists
+        $database = db_get_row("SELECT feature_id FROM ?:product_features_descriptions WHERE internal_name = 'Brands'");
+        if (!$database) {
+            $featureId = db_query("INSERT INTO ?:product_features (`feature_id`, `feature_code`, `company_id`, `purpose`, `feature_style`, `filter_style`, `feature_type`, `categories_path`, `parent_id`, `display_on_product`, `display_on_catalog`, `display_on_header`, `status`, `position`, `comparison`, `timestamp`, `updated_timestamp`) VALUES (NULL, 'Brands', '0', 'group_variation_catalog_item', 'dropdown_labels', 'checkbox', 'S', '0', '0', 'N', 'N', 'N', 'A', '0', 'N', '" . time() . "', '" . time() . "')");
+            $featureDescriptionId = db_query("INSERT INTO ?:product_features_descriptions (`feature_id`, `description`, `internal_name`, `full_description`, `prefix`, `suffix`, `lang_code`) VALUES ('" . $featureId . "', 'Brands', 'Brands', '', '', '', 'en')");
+            fn_check_ebay_create_or_update_variants_brands($featureId, $feature);
+        } else {
+            fn_check_ebay_create_or_update_variants_brands($database['feature_id'], $feature);
+        }
+    }
+}
+
+function fn_check_ebay_create_or_update_variants_brands($featureId, $value)
+{
+    $database = db_get_fields("SELECT variant_id FROM ?:product_feature_variant_descriptions WHERE variant = '" . $value . "'");
+
+    if (!$database) {
+        $variantId = db_query("INSERT INTO ?:product_feature_variants (`variant_id`, `feature_id`, `url`, `color`, `position`) VALUES (NULL, '" . $featureId . "', '', '#ffffff', '10')");
+        $variantDescriptionId = db_query("INSERT INTO ?:product_feature_variant_descriptions (`variant_id`, `variant`, `description`, `page_title`, `meta_keywords`, `meta_description`, `lang_code`) VALUES ('" . $variantId . "', '" . $value . "', '', '', '', '', 'en')");
+    } else {
+        foreach ($database as $varient_id) {
+            $recheck = db_get_field("SELECT variant_id FROM ?:product_feature_variants WHERE variant_id = '" . $varient_id . "' AND feature_id = '" . $featureId . "'");
+            if (!$recheck) {
+                $variantId = db_query("INSERT INTO ?:product_feature_variants (`variant_id`, `feature_id`, `url`, `color`, `position`) VALUES (NULL, '" . $featureId . "', '', '#ffffff', '" . 10 . "')");
+                $variantDescriptionId = db_query("INSERT INTO ?:product_feature_variant_descriptions (`variant_id`, `variant`, `description`, `page_title`, `meta_keywords`, `meta_description`, `lang_code`) VALUES ('" . $variantId . "', '" . $value . "', '', '', '', '', 'en')");
+            }
+        }
+    }
+}
+
 function fn_check_ebay_create_or_update_variants($featureId, $varientValue)
 {
     foreach ($varientValue as $key => $value) {
-        $value = str_replace("'", "\'",$value);
+        $value = str_replace("'", "\'", $value);
         $database = db_get_fields("SELECT variant_id FROM ?:product_feature_variant_descriptions WHERE variant = '" . $value . "'");
 
         if (!$database) {

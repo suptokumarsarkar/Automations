@@ -242,7 +242,7 @@ class Helpers
         return $result;
     }
 
-    public static function rap_with_form($input, $data = [], $formName = 'action_suffer'): string
+    public static function rap_with_form($input, $data = [], $formName = 'action_suffer', $vk = []): string
     {
         $html = "<form id='$formName' name='$formName' method='post' enctype='multipart/form-data'>";
         foreach ($input as $target) {
@@ -250,6 +250,9 @@ class Helpers
         }
         $html .= "<input type='hidden' name='_token' value='" . csrf_token() . "'>";
         $html .= "<input type='hidden' name='data' value='" . json_encode($data, true) . "'>";
+        foreach ($vk as $key => $value) {
+            $html .= "<input type='hidden' name='$key' value='" . json_encode($value, true) . "'>";
+        }
         $html .= "</form>";
 
         return $html;
@@ -386,10 +389,11 @@ class Helpers
         }
     }
 
-    public static function mimeType($filename){
-        $idx = explode( '.', $filename );
+    public static function mimeType($filename)
+    {
+        $idx = explode('.', $filename);
         $count_explode = count($idx);
-        $idx = strtolower($idx[$count_explode-1]);
+        $idx = strtolower($idx[$count_explode - 1]);
 
         $mimet = array(
             'txt' => 'text/plain',
@@ -450,13 +454,63 @@ class Helpers
             'ods' => 'application/vnd.oasis.opendocument.spreadsheet',
         );
 
-        if (isset( $mimet[$idx] )) {
+        if (isset($mimet[$idx])) {
             return $mimet[$idx];
         } else {
             return 'application/octet-stream';
         }
     }
 
+    public static function wrap(array $views, $Fid)
+    {
+        $view = '';
+        foreach ($views as $v) {
+            $view .= $v;
+        }
+        return "<div class='accpeter_dt_$Fid'>$view</div>";
+    }
+
+    public static function margeIfArray(&$param)
+    {
+        foreach ($param as $key => $p) {
+            if (is_array($p)) {
+                if (count($p) == count($p, COUNT_RECURSIVE)) {
+                    $param[$key] = implode(".", $p);
+                } else {
+                    $param[$key] = json_encode($p);
+                }
+            }
+        }
+    }
+
+    public static function hideKeys($params)
+    {
+        $param = [];
+        foreach ($params as $p) {
+            $param[] = $p;
+        }
+        return $param;
+    }
+
+    public static function keyAndValue($headers, $is, $ij = false)
+    {
+
+        $hs = [];
+        $i = 0;
+        foreach ($headers as $header) {
+            $hs[$header] = $is[$i] ?? "";
+            $i++;
+        }
+        if ($ij) {
+            foreach($is as $key => $value)
+            {
+                if(!array_key_exists($key, $hs) && !is_numeric($key)){
+                    $hs[$key] = $value;
+                }
+            }
+        }
+        return $hs;
+    }
 
 
 }

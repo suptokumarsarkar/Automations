@@ -13,6 +13,7 @@
 @endpush
 @includeIf('App.Components.Modal')
 @includeIf('App.Components.Prompt')
+@includeIf('App.Components.Loader')
 @push("MasterScript")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
             integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="

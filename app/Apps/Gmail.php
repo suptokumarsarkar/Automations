@@ -7,7 +7,6 @@ use App\Logic\Helpers;
 use App\Models\Account;
 use App\Models\AppsData;
 use App\Models\WebSetting;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 
 class Gmail

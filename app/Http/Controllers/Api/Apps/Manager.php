@@ -19,6 +19,28 @@ class Manager extends Controller
      * @var mixed
      */
     private $funcData;
+    /**
+     * @var mixed
+     */
+    private $appClass;
+
+    public function getExtraDataFields($id, $app, Request $request): array
+    {
+        $data = $request->get("vk");
+        $value = Helpers::evaluteData($request->all());
+        $appData = json_decode($app, true);
+        if ($appData['Mode'] == 'Triggers') {
+            $appClassHere = "App\\Apps\\Triggers\\" . $appData['AppId'] . 'Trigger';
+            $this->appClass = new $appClassHere($appData['AccountId']);
+        } else {
+            $appClassHere = "App\\Apps\\Actions\\" . $appData['AppId'] . 'ActionFields';
+            $this->appClass = new $appClassHere($appData['AccountId']);
+        }
+        $fnc = $appData['Func'];
+        return $this->appClass->$fnc($id, $value, $data);
+
+
+    }
 
     public function getApps(Request $request)
     {
@@ -82,7 +104,6 @@ class Manager extends Controller
             return new Response([
                 'status' => 200,
                 'data' => $this->appClass->getCheckupData($request->accountId, $request->trigger),
-                'messages' => $this->appClass->getEmails($this->appClass->getToken($request->accountId), $this->userInfo($request->accountId)->data['sub']),
                 'message' => Helpers::translate('Account Detected Successfully.')
             ]);
         } else {
@@ -176,7 +197,6 @@ class Manager extends Controller
             $mainData = $this->dataFillup($value['api'], $funcData);
         }
         Helpers::stringValueFillup($mainData, $value);
-
         return $this->runZap($mainData, $data, Auth::id());
 
 
@@ -206,24 +226,24 @@ class Manager extends Controller
             if (is_array($item)) {
                 foreach ($item as $id => $mainKey) {
                     if (array_key_exists($mainKey, $funcData)) {
-                        if(isset($mainData[$key]) && is_array($mainData[$key])){
+                        if (isset($mainData[$key]) && is_array($mainData[$key])) {
                             $mainData[$key][] = $funcData[$mainKey];
-                        }elseif (isset($mainData[$key]) && is_string($mainData[$key])){
+                        } elseif (isset($mainData[$key]) && is_string($mainData[$key])) {
                             $prevData = $mainData[$key];
-                            $mainData[$key]= [$prevData, $funcData[$mainKey]];
-                        }else{
+                            $mainData[$key] = [$prevData, $funcData[$mainKey]];
+                        } else {
                             $mainData[$key] = $funcData[$mainKey];
                         }
                     }
                 }
             } else {
                 if (array_key_exists($item, $funcData)) {
-                    if(isset($mainData[$key]) && is_array($mainData[$key])){
+                    if (isset($mainData[$key]) && is_array($mainData[$key])) {
                         $mainData[$key][] = $funcData[$item];
-                    }elseif (isset($mainData[$key]) && is_string($mainData[$key])){
+                    } elseif (isset($mainData[$key]) && is_string($mainData[$key])) {
                         $prevData = $mainData[$key];
-                        $mainData[$key]= [$prevData, $funcData[$item]];
-                    }else{
+                        $mainData[$key] = [$prevData, $funcData[$item]];
+                    } else {
                         $mainData[$key] = $funcData[$item];
                     }
                 }

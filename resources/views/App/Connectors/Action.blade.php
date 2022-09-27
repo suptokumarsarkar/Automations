@@ -174,7 +174,8 @@
 
             </details>
         </div>
-
+        <input type="hidden" id="actionAppIdRgx" value="{{$app->app->AppId}}">
+        <input type="hidden" id="AppIdRgx" value="{{$first->app->AppId}}">
     </div>
 </section>
 @push('MasterScript')
@@ -248,6 +249,7 @@
                     getAccountsAction(app.AppId, app.getLogo);
                     setEventAction(app.getActions);
                     setEnvironmentsAction(app);
+                    $("#actionAppIdRgx").val(AppId);
                     $(".appScriptSectionAction").html(app.script);
                 }
             });
@@ -256,7 +258,6 @@
 
         function setEventAction(events) {
             let html = '';
-            console.log(events);
             for (let i = 0; i < events.length; i++) {
                 html += `
                 <option title="` + events[i].description + `"
@@ -365,12 +366,12 @@
                 let actionFireList = {
                     action_id: $("#actions").val(),
                     account_id: $("#apiAccountIdAction").val(),
-                    AppId: '{{$app->app->AppId}}'
+                    AppId: $("#actionAppIdRgx").val()
                 };
                 let triggerFireList = {
                     action_id: $("#triggers").val(),
                     account_id: $("#apiAccountId").val(),
-                    AppId: '{{$first->app->AppId}}',
+                    AppId: $("#AppIdRgx").val(),
                     Data: $('#triggerForm').serializeArray()
                 };
                 checkAction{{$first->app->AppId}}(triggerFireList, actionFireList);

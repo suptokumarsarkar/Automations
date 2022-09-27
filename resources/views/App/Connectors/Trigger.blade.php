@@ -178,7 +178,6 @@
             $(".mySelfTrigger").attr("open", false);
             $(".mySelfAction").slideDown();
             scroll_to_id(".mySelfAction",20);
-            console.log($("#triggerForm").serialize());
             $(".mySelfAction").attr("open", true);
         }
 
@@ -192,6 +191,7 @@
                     getAccounts(app.AppId, app.getLogo);
                     setEvent(app.getTriggers);
                     setEnvironments(app);
+                    $("#AppIdRgx").val(AppId);
                     $(".appScriptSection").html(app.script);
                 }
             });
@@ -200,7 +200,6 @@
 
         function setEvent(events) {
             let html = '';
-            console.log(events);
             for (let i = 0; i < events.length; i++) {
                 html += `
                 <option title="` + events[i].description + `"
